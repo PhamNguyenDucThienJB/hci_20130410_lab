@@ -4,6 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang Đăng Ký Người Dùng</title>
+    <!--- Các yêu cầu cơ bản của trang -->
+    <meta charset="utf-8">
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Các yêu cầu đặc biệt cho di động -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- script -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
     <style>
         .form-group {
             margin-bottom: 15px;
@@ -49,8 +70,28 @@
         }
     </style>
 </head>
-<body>
+<body id="top" style="background-color: white;">
+<!-- đầu trang -->
+<header class="s-header">
 
+  <div class="header-logo">
+      <a class="site-logo" href="index.html">
+          <img src="images/logo.svg" alt="Trang Chủ">
+      </a>
+  </div>
+
+  <nav class="header-nav-wrap" >
+      <ul class="header-nav"style="font-size: larger;">
+          <li class="current"><a href="index.html" style="color: black;" title="Home">Trang Chủ</a></li>
+          <li><a href="about.html" title="About"style="color: black;">Giới Thiệu</a></li>
+          <li><a href="events.html" title="Events"style="color: black;">Lab Bài Tập</a></li>
+          <li><a href="contact.html" title="Contact us"style="color: black;">Liên Hệ</a></li>  
+      </ul>
+  </nav>
+
+  <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+
+</header>
     <div class="formbold-main-wrapper">
         <!-- Author: FormBold Team -->
         <!-- Learn More: https://formbold.com -->
