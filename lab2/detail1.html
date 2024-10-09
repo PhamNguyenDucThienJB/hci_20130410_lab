@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .editor-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        textarea {
+            width: 100%;
+            height: 300px;
+            font-family: monospace;
+            font-size: 16px;
+            line-height: 1.5;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .actions {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        button.run {
+            background-color: #28a745;
+            color: white;
+        }
+        button.clear {
+            background-color: #ffc107;
+            color: white;
+        }
+        button.submit {
+            background-color: #007bff;
+            color: white;
+        }
+        button.hint {
+            background-color: #6c757d;
+            color: white;
+        }
+        .feedback-container {
+            margin-top: 20px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        #previous-submissions {
+            margin-top: 20px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        #previous-feedback {
+            margin-top: 20px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <button class="submit" onclick="goBack()">Back</button>
+        <h1>Bài tập: Cơ Bản Về Mảng</h1>
+        <p>Mô tả: Hiểu khái niệm <span style="color: red;">Cơ Bản Về Mảng</span>. Bạn cần viết lớp Person với các thuộc tính và phương thức cơ bản.</p>
+
+
+        <!-- Môi trường Editor -->
+        <div class="editor-container">
+            <textarea id="code-editor" placeholder="Viết mã của bạn ở đây..."></textarea>
+        </div>
+
+        <!-- Các nút điều khiển -->
+        <div class="actions" style="justify-content: center">
+            <button class="run" onclick="runCode()">Chạy Mã</button>
+            <button class="clear" onclick="clearCode()">Xóa Mã</button>
+            <button class="submit" onclick="submitCode()">Nộp Bài</button>
+            <button class="hint" onclick="getHint()">Gợi Ý</button>
+            <button class="submit" onclick="saveProgress()">Lưu Tiến Độ</button>
+        </div>
+
+        <!-- Phản hồi và giúp đỡ -->
+        <div class="feedback-container">
+            <h2>Phản hồi và yêu cầu giúp đỡ</h2>
+            <textarea id="feedback" placeholder="Để lại phản hồi hoặc yêu cầu giúp đỡ ở đây..."></textarea>
+            <button onclick="submitFeedback()">Gửi Phản Hồi</button>
+        </div>
+
+        <!-- Lưu trữ các lần gửi trước đó -->
+        <div id="previous-submissions">
+            <h2>Các lần gửi trước đó</h2>
+            <ul id="submission-list"></ul>
+        </div>
+
+        <!-- Lưu trữ các phản hồi trước đó -->
+        <div id="previous-feedback">
+            <h2>Các phản hồi trước đó</h2>
+            <ul id="feedback-list"></ul>
+        </div>
+    </div>
+
+    <script>
+        let hintCount = 3; // Số lần gợi ý tối đa
+        const submissions = JSON.parse(localStorage.getItem('submissions')) || [];
+        const feedbacks = JSON.parse(localStorage.getItem('feedbacks')) || [];
+
+        function runCode() {
+            alert("Mã của bạn đang chạy...");
+        }
+
+        function clearCode() {
+            document.getElementById('code-editor').value = "";
+        }
+
+        function submitCode() {
+            const code = document.getElementById('code-editor').value;
+            submissions.push(code);
+            localStorage.setItem('submissions', JSON.stringify(submissions));
+            alert("Bài tập của bạn đã được nộp! Nhẫn OK để THOÁT !!!!!!!!");
+            displaySubmissions();
+            setTimeout(function() {
+                window.location.href = "manage.html";
+            }, 100);
+        }
+
+        function saveProgress() {
+            const code = document.getElementById('code-editor').value;
+            localStorage.setItem('savedCode', code);
+            alert("Tiến độ của bạn đã được lưu!");
+        }
+
+        function submitFeedback() {
+            const feedback = document.getElementById('feedback').value;
+            feedbacks.push(feedback);
+            localStorage.setItem('feedbacks', JSON.stringify(feedbacks));
+            alert("Phản hồi của bạn đã được gửi!");
+            displayFeedbacks();
+            document.getElementById('feedback').value = ""; // Xóa nội dung textarea
+        }
+
+        function getHint() {
+            if (hintCount > 0) {
+                alert("Đây là gợi ý của bạn! (Giới thiệu về lớp Person trong Java)");
+                hintCount--;
+            } else {
+                alert("Bạn đã hết số lần gợi ý!");
+            }
+        }
+
+        function displaySubmissions() {
+    const submissionList = document.getElementById('submission-list');
+    submissionList.innerHTML = ''; // Xóa danh sách cũ
+
+    submissions.forEach((submission, index) => {
+        const li = document.createElement('li');
+        li.textContent = `Lần gửi ${index + 1}: ${submission}`;
+        submissionList.appendChild(li);
+        submissionList.appendChild(li);
+    });
+
+    // Nếu không có lần gửi nào, hiển thị thông báo
+    if (submissions.length === 0) {
+        const li = document.createElement('li');
+        li.textContent = "Chưa có lần gửi nào.";
+        submissionList.appendChild(li);
+    }
+}
+
+
+        function displayFeedbacks() {
+            const feedbackList = document.getElementById('feedback-list');
+            feedbackList.innerHTML = ''; // Xóa danh sách cũ
+
+            feedbacks.forEach((feedback, index) => {
+                const li = document.createElement('li');
+                li.textContent = `Phản hồi ${index + 1}: ${feedback}`;
+                feedbackList.appendChild(li);
+            });
+        }
+
+        function goBack() {
+            window.location.href = "manage.html";
+        }
+
+        // Hiển thị các lần gửi và phản hồi trước đó khi tải trang
+        window.onload = function() {
+            displaySubmissions();
+            displayFeedbacks();
+            const savedCode = localStorage.getItem('savedCode');
+            if (savedCode) {
+                document.getElementById('code-editor').value = savedCode;
+            }
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .exercise-group {
+            margin-bottom: 20px;
+        }
+        .exercise-card {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .exercise-title {
+            font-size: 1.2em;
+            margin: 0;
+            cursor: pointer;
+        }
+        .exercise-description {
+            margin: 5px 0;
+        }
+        .filter-container {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        select, input[type="text"] {
+            padding: 10px;
+            width: 48%;
+        }
+        .status {
+            font-size: 0.9em;
+            color: green;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button.run {
+            background-color: #28a745;
+            color: white;
+            margin-right: 10px;
+        }
+        button.clear {
+            background-color: red;
+            color: white;
+        }
+        .logout-button {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            padding: 10px 15px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="logout-button" onclick="logout()">Logout</button>
+        <h1>Dashboard</h1>
+
+        <!-- Filter và Search -->
+        <form onsubmit="return false;">
+            <div class="filter-container">
+                <select id="language-filter" style="margin-right: 10px;" onchange="filterByLanguage()">
+                    <option value="">Tất cả ngôn ngữ</option>
+                    <option value="C">C</option>
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                </select>
+
+                <input type="text" id="search-bar" placeholder="Tìm kiếm bài tập theo từ khóa...">
+                <button class="run" onclick="searchExercises()">Tìm Kiếm</button>
+                <button class="clear" onclick="resetFilters()">Reset</button>
+            </div>
+        </form>
+
+        <!-- Group bài tập theo ngôn ngữ -->
+        <div class="exercise-group" id="group-c" data-language="C">
+            <h2>C Programming</h2>
+            <div class="exercise-card" data-detail-url="detail1.html">
+                <h3 class="exercise-title">
+                    <a href="detail1.html" class="exercise-link" data-title="Bài tập 1: Cơ bản về mảng">Bài tập 1: Cơ bản về mảng</a>
+                </h3>
+                <p class="exercise-description">Học cách sử dụng mảng trong C.</p>
+                <p>Độ khó: Easy | Thời gian: 30 phút | Điểm: 10</p>
+                <p class="status">Trạng thái: Chưa bắt đầu</p>
+            </div>
+        </div>
+
+        <div class="exercise-group" id="group-python" data-language="Python">
+            <h2>Python Programming</h2>
+            <div class="exercise-card" data-detail-url="detail2.html">
+                <h3 class="exercise-title">
+                    <a href="detail2.html" class="exercise-link" data-title="Bài tập 2: Xử lý chuỗi trong Python">Bài tập 2: Xử lý chuỗi trong Python</a>
+                </h3>
+                <p class="exercise-description">Tìm hiểu cách thao tác với chuỗi trong Python.</p>
+                <p>Độ khó: Medium | Thời gian: 45 phút | Điểm: 15</p>
+                <p class="status">Trạng thái: Đang thực hiện</p>
+            </div>
+        </div>
+
+        <div class="exercise-group" id="group-java" data-language="Java">
+            <h2>Java Programming</h2>
+            <div class="exercise-card" data-detail-url="detail3.html">
+                <h3 class="exercise-title">Bài tập 3: Hướng đối tượng trong Java</h3>
+                <p class="exercise-description">Hiểu khái niệm hướng đối tượng với Java.</p>
+                <p>Độ khó: Hard | Thời gian: 60 phút | Điểm: 20</p>
+                <p class="status">Trạng thái: Đã hoàn thành</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Hàm để lọc bài tập theo ngôn ngữ
+        function filterByLanguage() {
+            var selectedLanguage = document.getElementById("language-filter").value;
+            var exercises = document.querySelectorAll(".exercise-group");
+
+            exercises.forEach(function(exercise) {
+                if (selectedLanguage === "" || exercise.getAttribute("data-language") === selectedLanguage) {
+                    exercise.style.display = "block";
+                } else {
+                    exercise.style.display = "none";
+                }
+            });
+        }
+
+        // Hàm tìm kiếm bài tập
+        function searchExercises() {
+            var keyword = document.getElementById("search-bar").value.toLowerCase();
+            var exercises = document.querySelectorAll(".exercise-card");
+
+            exercises.forEach(function(exercise) {
+                var title = exercise.querySelector(".exercise-title").textContent.toLowerCase();
+                var description = exercise.querySelector(".exercise-description").textContent.toLowerCase();
+
+                if (title.includes(keyword) || description.includes(keyword)) {
+                    exercise.parentElement.style.display = "block"; // Hiển thị cả nhóm nếu bài tập trong đó khớp
+                } else {
+                    exercise.parentElement.style.display = "none"; // Ẩn cả nhóm nếu không có bài tập nào khớp
+                }
+            });
+        }
+
+        // Hàm cập nhật trạng thái và chuyển trang nếu chưa hoàn thành
+        function updateStatusAndRedirect(exerciseTitle, redirectUrl) {
+            const exercises = JSON.parse(localStorage.getItem('exercisesStatus')) || {};
+
+            // Nếu bài tập chưa hoàn thành thì mới cập nhật trạng thái và chuyển trang
+            if (!exercises[exerciseTitle] || exercises[exerciseTitle] !== 'Hoàn thành') {
+                exercises[exerciseTitle] = 'Đã Hoàn thành';
+                localStorage.setItem('exercisesStatus', JSON.stringify(exercises));
+                window.location.href = redirectUrl;
+            } else {
+                alert('Bài tập này đã hoàn thành, bạn không thể truy cập lại!');
+            }
+        }
+
+        // Hiển thị trạng thái bài tập từ localStorage khi tải trang
+        window.onload = function() {
+            const exercises = JSON.parse(localStorage.getItem('exercisesStatus')) || {};
+
+            document.querySelectorAll('.exercise-card').forEach(function(card) {
+                const title = card.querySelector('.exercise-title a').textContent;
+
+                // Cập nhật trạng thái
+                if (exercises[title]) {
+                    card.querySelector('.status').textContent = `Trạng thái: ${exercises[title]}`;
+
+                    // Vô hiệu hóa link nếu bài tập đã hoàn thành
+                    if (exercises[title] === 'Hoàn thành') {
+                        const link = card.querySelector('.exercise-link');
+                        // alert("Bạn Đã Hoàn Thành Bài Tập...");
+                        link.style.pointerEvents = 'none'; // Vô hiệu hóa click
+                        link.style.color = 'gray'; // Đổi màu link
+                        link.style.textDecoration = 'line-through'; // Đánh dấu là đã hoàn thành
+                    }
+                }
+            });
+        };
+
+        // Hàm reset bộ lọc
+        function resetFilters() {
+            document.getElementById("language-filter").selectedIndex = 0;
+            document.getElementById("search-bar").value = '';
+            filterByLanguage(); // Hiển thị lại tất cả bài tập
+        }
+
+        // Hàm đăng xuất
+        function logout() {
+            window.location.href = "login.html"; // Thay đổi đường dẫn nếu cần
+        }
+    </script>
+    
+</body>
+</html>
