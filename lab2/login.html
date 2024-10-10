@@ -4,8 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+	<meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Các yêu cầu đặc biệt cho di động -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- script -->
+    <script src="js"></script>
+
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
 </head>
 <style>
+	 body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-top: 80px; /* Khoảng trống bằng chiều cao của header */
+        }
+
+        .s-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999; /* Giữ header trên các thành phần khác */
+            background-color: rgba(0, 0, 0, 0.8);  /* Màu nền với độ trong suốt */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            transition: background-color 0.3s ease; /* Hiệu ứng mượt mà khi thay đổi nền */
+        }
+
+        .s-header a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 0 15px;
+        }
+
     body {
 	background: #DCDDDF url(https://cssdeck.com/uploads/media/items/7/7AF2Qzt.png);
 	color: #000;
@@ -249,8 +294,27 @@ form:after {
 	color: #00aeef;
 }
 </style>
+
 <body>
-    <div class="container">
+	<!-- <header class="s-header">
+
+        <div class="header-logo">
+            <a class="site-logo" href="index.html">
+                <p style="font-size: xx-large;">Phạm Nguyễn Đức Thiện</p>
+            </a>
+        </div>
+
+        <nav class="header-nav-wrap" >
+            <ul class="header-nav"style="font-size: larger;">
+                <li class="current"><a href="index.html" title="Home">Trang Chủ</a></li>
+                <li><a href="about.html" title="About">Giới Thiệu</a></li>
+                <li><a href="events.html" title="Events">Lab Bài Tập</a></li>
+                <li><a href="contact.html" title="Contact us">Liên Hệ</a></li>  
+            </ul>
+        </nav> -->
+
+        <!-- <a class="header-menu-toggle" href="#0"><span>Menu</span></a> -->
+    <div class="container" style="margin-top: 100px;">
         <section id="content">
             <form onsubmit="return validateForm()">
                 <h1>Đăng Nhập</h1>
