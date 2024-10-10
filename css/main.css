@@ -560,7 +560,7 @@ dl,
 form,
 .video-container,
 .ss-custom-select {
-  margin-bottom: 3.2rem;
+  /* margin-bottom: 3.2rem; */
 }
 
 
@@ -3407,13 +3407,13 @@ html.no-csstransitions .hero-content {
  * ## page content 
  * ------------------------------------------------------------------- */
 .page-content {
-  padding-top: 12rem;
+  /* padding-top: 12rem; */
   padding-bottom: 16rem;
   background-color: #ffffff;
 }
 
 .page-content .row {
-  max-width: 1080px;
+  max-width: 1150px;
 }
 
 /* ------------------------------------------------------------------- 
