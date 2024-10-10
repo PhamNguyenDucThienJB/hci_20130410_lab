@@ -28,7 +28,42 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
+    <style>
+        /* Phong cách cơ bản */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-top: 80px; /* Khoảng trống bằng chiều cao của header */
+        }
 
+        .s-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999; /* Giữ header trên các thành phần khác */
+            background-color: rgba(0, 0, 0, 0.8);  /* Màu nền với độ trong suốt */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            transition: background-color 0.3s ease; /* Hiệu ứng mượt mà khi thay đổi nền */
+        }
+
+        .s-header a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 0 15px;
+        }
+
+        /* Nội dung chính */
+        .content {
+            padding: 20px;
+            height: 2000px; /* Để trang đủ dài để cuộn */
+            background-color: #f4f4f4;
+        }
+    </style>
 </head>
 
 <body id="top">
