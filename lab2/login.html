@@ -32,7 +32,7 @@
         }
 
         .s-header {
-            position: fixed;
+            /* position: fixed; */
             top: 0;
             left: 0;
             width: 100%;
@@ -288,6 +288,7 @@ form:after {
 	-ms-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
 	transition: all 0.3s ease;
+	/* padding-top: 10px; */
 }
 .button a:hover {
 	background-position: 0 -135px;
@@ -319,7 +320,7 @@ form:after {
 
         <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
 
-		<div class="tabs" style="margin-top: 50px;">
+		<div class="tabs" style="margin-top: 100px;">
 			<button class="tablinks active" data-electronic="allproducts">Requirement</button>
 			<button class="tablinks" data-electronic="Microcontrollers">Design</button>
 			<button class="tablinks" data-electronic="module">Implement</button>
@@ -331,8 +332,8 @@ form:after {
 			<div class="">
 			  
 			   <!-- Tab content -->
-			   <div class="wrapper_tabcontent">
-				<div id="allproducts" class="tabcontent active">
+			   <div class="wrapper_tabcontent" style=" ">
+				<div id="allproducts" class="tabcontent active" style="padding-left: 0;">
 					<h3>Yêu cầu thiết kế giao diện người dùng:</h3>
 					<p>
 						<strong>Nhập văn bản (Một dòng):</strong> <br>
@@ -385,7 +386,7 @@ form:after {
 				 
 		  </div>
 
-    <div  id="module" class="tabcontent" class="container" style="margin-top: 100px;margin-right: 300px;">
+    <div  id="module" class="tabcontent" class="container" style="margin-top: 100px;margin-right: 250px;">
         <section id="content">
             <form onsubmit="return validateForm()">
                 <h1>Đăng Nhập</h1>
@@ -393,7 +394,8 @@ form:after {
                     <input type="text" placeholder="Username" required="" id="username" />
                 </div>
                 <div>
-                    <input type="password" placeholder="Password" required="" id="password" />
+                    <input style="      height: 60px;  margin-left: 36px;
+" type="password" placeholder="Password" required="" id="password" />
                 </div>
                 <div>
                     <input type="submit" value="Log in" />
