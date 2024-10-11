@@ -1,18 +1,45 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
+
 <head>
-
-    <!--- basic page needs
-    ================================================== -->
     <meta charset="utf-8">
-    <title>Hesed - Events</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <!-- mobile specific metas
+    <title>lab Bài Tập</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+ <!-- mobile specific metas
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+     <!-- Google Fonts -->
+     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <!-- Vendor CSS Files -->
+     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+ 
+     <!-- Template Main CSS File -->
+     <link href="assets/css/style.css" rel="stylesheet">
     <!-- CSS
     ================================================== -->
     <link rel="stylesheet" href="css/base.css">
@@ -28,59 +55,43 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
-    <style>
-        /* Phong cách cơ bản */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            padding-top: 80px; /* Khoảng trống bằng chiều cao của header */
-        }
 
-        .s-header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 9999; /* Giữ header trên các thành phần khác */
-            background-color: rgba(0, 0, 0, 0.8);  /* Màu nền với độ trong suốt */
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-            transition: background-color 0.3s ease; /* Hiệu ứng mượt mà khi thay đổi nền */
-        }
-
-        .s-header a {
-            color: white;
-            text-decoration: none;
-            font-size: 20px;
-            padding: 0 15px;
-        }
-
-        /* Nội dung chính */
-        .content {
-            padding: 20px;
-            height: 2000px; /* Để trang đủ dài để cuộn */
-            background-color: #f4f4f4;
-        }
-    </style>
 </head>
+<style>
+    /* Phong cách cơ bản */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        padding-top: 80px; /* Khoảng trống bằng chiều cao của header */
+    }
 
-<body id="top">
+    .s-header {
+        /* position: fixed; */
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999; /* Giữ header trên các thành phần khác */
+        background-color: rgba(0, 0, 0, 0.8);  /* Màu nền với độ trong suốt */
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+        transition: background-color 0.3s ease; /* Hiệu ứng mượt mà khi thay đổi nền */
+    }
 
-    <!-- preloader
-    ================================================== -->
-    <div id="preloader">
-        <div id="loader" class="dots-jump">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>
+    .s-header a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        padding: 0 15px;
+    }
 
+    /* Nội dung chính */
+  
+</style>
+<body>
 
-    <!-- header
-    ================================================== -->
+    <!-- ======= Header ======= -->
     <header class="s-header">
 
         <div class="header-logo">
@@ -88,7 +99,7 @@
                 <p style="font-size: xx-large;">Phạm Nguyễn Đức Thiện</p>
             </a>
         </div>
-
+    
         <nav class="header-nav-wrap" >
             <ul class="header-nav"style="font-size: larger;">
                 <li class="current"><a href="index.html" title="Home">Trang Chủ</a></li>
@@ -97,117 +108,118 @@
                 <li><a href="contact.html" title="Contact us">Liên Hệ</a></li>  
             </ul>
         </nav>
-
+    
         <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
 
-    </header> <!-- end s-header -->
 
+    <main id="main" style="background-color: white;">
 
-    <!-- page header
-    ================================================== -->
-    <section class="page-header page-header--events">
+        <!-- ======= Portfolio Section ======= -->
+        <section id="portfolio" class="portfolio" style="margin-top: 100px;">
+            <div class="container" data-aos="fade-up">
 
-        <div class="gradient-overlay"></div>
-        <div class="row page-header__content">
-            <div class="column">
-                <h1>Lab Bài Tập Giao Tiếp Người Máy</h1>
-            </div>
-        </div>
+                <div class="section-title">
+                    <h2>Labs</h2>
 
-    </section> <!-- end page-header -->
-
-
-    <!-- page content
-    ================================================== -->
-    <section class="page-content">
-
-        <div class="row wide block-large-1-2 block-900-full events-list"style="justify-content: center">
-            <div class="row wide block-large-1-2 block-900-full events-list">
-                <div class="column events-list__item">
-                    <h3 class="display-1 events-list__item-title">
-                        <a href="lab1.html" title="">Lab1</a>
-                    </h3>
-                   
-                    <ul class="events-list__meta">
-                        <li class="events-list__meta-date">Saturday, September 28, 2024</li>
-                        <li class="events-list__meta-time">8:00AM - 11:45PM</li>
-                        <li class="events-list__meta-location">Thủ Đức</li>
-                    </ul>
                 </div>
-            <div class="column events-list__item">
-                <h3 class="display-1 events-list__item-title">
-                    <a href="lab1_2.html" title="">Lab1_2</a>
-                </h3>
-               
-                <ul class="events-list__meta">
-                    <li class="events-list__meta-date">Saturday, September 28, 2024</li>
-                    <li class="events-list__meta-time">8:00AM - 11:45PM</li>
-                    <li class="events-list__meta-location">Thủ Đức</li>
-                </ul>
-            </div>
-           
-        </div> <!-- end events-list -->
 
-        <div class="row">
-            <div class="column large-full">
-                <nav class="pgn">
-                    <ul>
-                        <li><a class="pgn__prev" href="#0">Prev</a></li>
-                        <li><a class="pgn__num current" href="#0">Lab1</a></li>
-                        <li><a class="pgn__num" href="lab2/login.html">Lab2</a></li>
-                        <li><a class="pgn__num" href="#0">Lab3</a></li>
-                        <li><a class="pgn__num" href="#0">Lab4</a></li>
-                        <li><a class="pgn__num" href="#0">Lab5</a></li>
-                        <li><span class="pgn__num dots">…</span></li>
-                        <li><a class="pgn__num" href="#0">Lab8</a></li>
-                        <li><a class="pgn__next" href="#0">Next</a></li>
-                    </ul>
-                </nav> <!-- end pgn -->
+                <div class="row" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-lg-12 d-flex justify-content-center">
+                        <ul id="portfolio-flters">
+
+                            <li><a class="active" href="lab1.html" style="color: darkblue;">Lab1</a></li>
+                            <!-- <li><a class="" href="lab1.2.html" style="color: darkblue;">Lab1.2</a></li> -->
+                            <li><a class="" href="lab4.html" style="color: darkblue;">Lab2</a></li>
+                            <li><a class="" href="lab4.html" style="color: darkblue;">Lab3</a></li>
+                            <li><a class="" href="lab4.html" style="color: darkblue;">Lab4</a></li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
+        </section>
+        <!-- ----------------------------->
+        <h3 data-aos="fade-up">Lab 1,2</h3>
+        <style>
+            h3 {
+                margin-left: 6%;
+                color: rgb(1, 1, 17)
+            }
+        </style>
+          
+        <div class="tabset" data-aos="fade-up" >
+            
+            <!-- Tab 1 -->
+           
+            <input type="radio" name="tabset" id="tab1" aria-controls="marzen"  checked>
+            <label for="tab1">Requirement</label>
+            <!-- Tab 2 -->
+            <input type="radio" name="tabset" id="tab2" aria-controls="rauchbier">
+            <label for="tab2">Design</label>
+            <!-- Tab 3 -->
+            <input type="radio" name="tabset" id="tab3" aria-controls="dunkles">
+            <label for="tab3">Implement</label>
+            <!-- Tab 4 -->
+            <input type="radio" name="tabset" id="tab4" aria-controls="implement2">
+            <label for="tab4">Implement 2</label>
+
+            <!------------------------------------------------------>
+            <div class="tab-panels active">
+                <section id="marzen" class="tab-panel" style="padding-left: 1.5%">
+                    <h3 style="color: rgb(116, 113, 113); margin-left: 2%;">Requirement: </h3>
+                    <p>- Chọn 1 đối tượng bất kỳ trong thế giới thực, ví dụ như <i>lớp, môn học, giảng viên</i>,…<br> Sau đó thiết kế chức năng Quản lý đối tượng đó trên html bao gồm các tính năng<b> thêm, sửa, xóa, tìm kiếm</b> cho đối tượng đó.
+                        <p>-<b>Ví dụ:</b>làm chức năng Quản lý Sinh viên, bao gồm tính năng <b>thêm, sửa, xóa, tìm kiếm. </b></p>
+                        <p>-<b>Chú ý:</b> Các thành viên trong nhóm không được chọn các đối tượng giống nhau.</p>
+                </section>
+                <section id="rauchbier" class="tab-panel" style="padding-left: 1.5%;">
+                    <h3 style="color: rgb(116, 113, 113); margin-left: 2%;">Design: </h3>
+                    <div class="row">
+                        <div class="col-6">
+                            <h5> 1.Design on paper </h5>
+                            <!-- <img src="assets/img/lab1/lab1design.jpg" width="100%" height="500" alt=""> -->
+                            <br><br>
+                            <!-- <div class="wrapper" style="padding-left: 41%;">
+                                <button type="button" class="btn btn-info" style="background-color: seagreen; border-color: seagreen;"><a target="_blank"
+                            href="assets/img/lab1/lab1design.jpg" download="Coffee staff manage"
+                            style="color: white;">Download</a></button><br>
+                            </div> -->
+                        </div>
+
+                        <div class="col-6">
+                            <h5>2.Design on Figma</h5>
+                            <!-- <img src="assets/img/lab1/design_html.png" width="100%" height="500" alt=""> -->
+                            <br> <br>
+                            <div class="wrapper" style="padding-left: 31%;">
+                                <button type="button" class="btn btn-info" style="background-color: seagreen; border-color: seagreen;"><a target="_blank"
+                                    href="assets/img/lab1/design_html.png" download="Coffee staff manage"
+                                    style="color: white;">Download</a></button>
+                                <button type="button" class="btn btn-info" style="background-color: seagreen; border-color: seagreen;"><a target="_blank"
+                            href="https://www.figma.com/file/93HXDduaTpES45VyyrkPwn/lab1" 
+                            style="color: white;">Go to Figma</a></button><br>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="dunkles" class="tab-panel">
+
+                    <h3 style=" color: rgb(116, 113, 113); margin-left: 2%; ">Implement: </h3>
+                   
+                    <iframe src="lab1.html" style=" height: 100%;width: 100%; min-height: 1000px;min-width: 1000px; max-width: auto; "> </iframe>
+                </section>
+                <section id="implement2" class="tab-panel">
+                    <h3 style="color: rgb(116, 113, 113); margin-left: 2%;">Implement 2:</h3>
+                    <iframe src="lab1_2.html" style="height: 100%; width: 100%; min-height: 1000px; min-width: 1000px; max-width: auto;"></iframe>
+                </section>
+                
+            </div>
+
         </div>
 
-    </section> <!-- end page content -->
 
+    </main>
+    <!-- End #main -->
 
-    <!-- Social
-    ================================================== -->
-    <section class="s-social">
-            
-        <div class="row social-content">
-            <div class="column">
-                <ul class="social-list">
-                    <li class="social-list__item">
-                        <a href="#0" title="">
-                            <span class="social-list__icon social-list__icon--facebook"></span>
-                            <span class="social-list__text">Facebook</span>
-                        </a>
-                    </li>
-                    <li class="social-list__item">
-                        <a href="#0" title="">
-                            <span class="social-list__icon social-list__icon--twitter"></span>
-                            <span class="social-list__text">Twitter</span>
-                        </a>
-                    </li>
-                    <li class="social-list__item">
-                        <a href="#0" title="">
-                            <span class="social-list__icon social-list__icon--instagram"></span>
-                            <span class="social-list__text">Instagram</span>
-                        </a>
-                    </li>
-                    <li class="social-list__item">
-                        <a href="#0" title="">
-                            <span class="social-list__icon social-list__icon--email"></span>
-                            <span class="social-list__text">Email</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div> <!-- end social-content -->
-
-    </section> <!-- end s-social -->
-
-
-    <!-- footer
+ <!-- footer
     ================================================== -->
     <footer class="s-footer">
 
@@ -263,13 +275,26 @@
             </a>
         </div>
 
-    </footer> <!-- end s-footer -->
+    </footer><!-- end s-footer -->
 
+    <div id="preloader "></div>
+    <a href="# " class="back-to-top d-flex align-items-center justify-content-center "><i class="bi bi-arrow-up-short "></i></a>
 
-    <!-- Java Script
-    ================================================== -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js "></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js "></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js "></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js "></script>
+    <script src="assets/vendor/php-email-form/validate.js "></script>
+    <script src="assets/vendor/purecounter/purecounter.js "></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js "></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js "></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js "></script>
+    <script src="lab1.js "></script>
+
 
 </body>
+
+</html>
