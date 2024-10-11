@@ -9,11 +9,12 @@
 
     <!-- Các yêu cầu đặc biệt cho di động -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<script src="/assets/js/script.js"></script>
+<script src="/assets/js/labs4.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/main.css">
-
+	<link rel="stylesheet" href="/assets/css/labs4.css">
     <!-- script -->
     <script src="js"></script>
 
@@ -318,7 +319,74 @@ form:after {
         </nav>
 
         <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
-    <div class="container" style="margin-top: 100px;">
+
+		<div class="tabs" style="margin-top: 50px;">
+			<button class="tablinks active" data-electronic="allproducts">Requirement</button>
+			<button class="tablinks" data-electronic="Microcontrollers">Design</button>
+			<button class="tablinks" data-electronic="module">Implement</button>
+		  </div>
+
+		  <div class="formbold-main-wrapper">
+			<!-- Author: FormBold Team -->
+			<!-- Learn More: https://formbold.com -->
+			<div class="">
+			  
+			   <!-- Tab content -->
+			   <div class="wrapper_tabcontent">
+				<div id="allproducts" class="tabcontent active">
+					<h3>Yêu cầu thiết kế giao diện người dùng:</h3>
+					<p>
+						<strong>Nhập văn bản (Một dòng):</strong> <br>
+						<em>Tên người dùng:</em> Phải là duy nhất, tối đa 255 ký tự. <br>
+						Một hộp văn bản có gợi ý (placeholder) như "Nhập tên người dùng của bạn".<br><br>
+			
+						<strong>Nhập mật khẩu (Một dòng có văn bản ẩn):</strong> <br>
+						<em>Mật khẩu:</em> Kiểm tra độ mạnh mật khẩu tối thiểu, tối đa 255 ký tự. <br>
+						Một hộp văn bản ẩn văn bản nhập, có nút chuyển đổi "Hiển thị/Ẩn".<br><br>
+			
+						<strong>Nhập email:</strong> <br>
+						<em>Địa chỉ email:</em> Phải là định dạng email hợp lệ và duy nhất, tối đa 255 ký tự. <br>
+						Một hộp văn bản có chỗ giữ chỗ như "Nhập email của bạn".<br><br>
+			
+						<strong>Nhập văn bản (Tùy chọn, một dòng):</strong> <br>
+						<em>Họ và tên:</em> Một hộp văn bản thông thường, có chỗ giữ chỗ như "Nhập họ và tên".<br><br>
+			
+						<strong>Menu thả xuống/Chọn:</strong> <br>
+						<em>Vai trò:</em> Trường bắt buộc. <br>
+						Menu thả xuống liệt kê các vai trò khả dụng được lấy từ hệ thống (ví dụ: Quản trị viên, Người dùng, v.v.).<br><br>
+			
+						<strong>Tải tệp lên hoặc Nhập URL (đối với URL hình ảnh):</strong> <br>
+						<em>Ảnh đại diện:</em> Nút tải lên hoặc trường URL cho phép người dùng tải lên hoặc nhập URL cho ảnh đại diện của họ, với hộp xem trước cho hình ảnh.<br><br>
+			
+						<strong>Hiển thị văn bản hoặc ngày (Chỉ đọc):</strong> <br>
+						<em>Tài khoản được tạo lúc:</em> Trường tự động điền, không cần nhập. Hiển thị dưới dạng dấu thời gian hoặc ngày.<br>
+						<em>Lần cập nhật cuối cùng lúc:</em> Trường tự động cập nhật khi thông tin người dùng được chỉnh sửa. Hiển thị dưới dạng dấu thời gian hoặc ngày.<br><br>
+			
+						<strong>Nút:</strong> <br>
+						<em>Tạo tài khoản/Lưu thay đổi:</em> Nút hành động chính gửi biểu mẫu. Nút này sẽ bị vô hiệu hóa cho đến khi tất cả các trường bắt buộc được xác thực.<br><br>
+			
+						<strong>Nút (Tùy chọn):</strong> <br>
+						<em>Hủy:</em> Nút hành động thứ cấp hủy việc gửi biểu mẫu và đưa người dùng trở lại trang trước đó.<br><br>
+			
+						<strong>Các cân nhắc bổ sung:</strong> <br>
+						Sử dụng thông báo xác thực nội tuyến bên dưới mỗi trường nhập cho các lỗi như "Tên người dùng đã được sử dụng" hoặc "Định dạng email không hợp lệ".<br>
+						Đảm bảo biểu mẫu phản hồi, hoạt động tốt trên cả máy tính để bàn và thiết bị di động.
+					</p>
+				</div>
+			</div>
+			
+	
+			<div id="Microcontrollers" class="tabcontent">
+		 
+				  <!-- <img src="assets/img/anhThietKe.jpg" alt="ảnh thiết kế" class="size_img"> -->
+			 <div class="button-container">
+				  <a href="https://www.figma.com/file/N2J9lp70RyR6k7aQbiVT2C/Lab4?type=design&node-id=0-1&mode=design&t=IgcVqJMp5GZfSdVy-0" class="link-button">Figma</a>
+				  <a href="assets/img/anhThietKe.jpg" download="assets/img/anhThietKe.jpg" class="download-button">Download Image</a>
+			  </div>
+				 
+		  </div>
+
+    <div  id="module" class="tabcontent" class="container" style="margin-top: 100px;margin-right: 300px;">
         <section id="content">
             <form onsubmit="return validateForm()">
                 <h1>Đăng Nhập</h1>
@@ -363,6 +431,24 @@ form:after {
     function runCode() {
         alert("Nếu là admin thì Tên:admin và mật khẩu là: admin");
     }
+	// Lấy tất cả các nút tab và nội dung tab
+const tablinks = document.querySelectorAll('.tablinks');
+const tabcontents = document.querySelectorAll('.tabcontent');
+
+// Lặp qua tất cả các nút tab để thêm sự kiện click
+tablinks.forEach(tab => {
+    tab.addEventListener('click', () => {
+        // Xóa class 'active' khỏi tất cả các tab và nội dung
+        tablinks.forEach(link => link.classList.remove('active'));
+        tabcontents.forEach(content => content.classList.remove('active'));
+        
+        // Thêm class 'active' cho tab và nội dung tương ứng
+        tab.classList.add('active');
+        const targetContent = document.getElementById(tab.getAttribute('data-electronic'));
+        targetContent.classList.add('active');
+    });
+});
+
 </script>
 
 </html>
