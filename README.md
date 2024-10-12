@@ -8,3 +8,8 @@
 
 #Lab 2
    + https://phamnguyenducthienjb.github.io/hci_20130410_lab/lab2/login.html
+
+
+#Lab 3
+   + https://phamnguyenducthienjb.github.io/hci_20130410_lab/lab3/index.html
+
