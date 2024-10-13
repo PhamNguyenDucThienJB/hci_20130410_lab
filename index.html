@@ -280,18 +280,15 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     
-    <script>
-      window.onscroll = function() {
-    console.log("Đang cuộn");
-    var header = document.querySelector('.s-header');
-    if (window.pageYOffset > 50) {
-        header.style.backgroundColor = "rgba(0, 0, 0, 1)";
-    } else {
-        header.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
-    }
-};
-
-    </script>
 <script src="js/main.js"></script>
+    <script>
+        window.onscroll = function() {
+            var header = document.querySelector('.s-header');
+            if (window.scrollY > 50) { // Điều kiện cuộn quá 50px
+                header.style.backgroundColor = 'rgba(0, 0, 0, 0.8)'; // Màu nền khi cuộn
+            } else {
+                header.style.backgroundColor = 'rgba(0, 0, 0, 0.8)'; // Màu nền mặc định
+            }
+        };</script>
 </body>
 </html>
