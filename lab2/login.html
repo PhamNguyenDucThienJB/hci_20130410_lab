@@ -349,7 +349,7 @@ form:after {
 			<button class="tablinks" data-electronic="module">Implement</button>
 		  </div>
 
-		  <div class="formbold-main-wrapper">
+		  <div class="formbold-main-wrapper" style="padding-bottom: 120px;">
 			<!-- Author: FormBold Team -->
 			<!-- Learn More: https://formbold.com -->
 			<div class="">
@@ -441,7 +441,7 @@ form:after {
         var errorDiv = document.getElementById("error");
 
         if (username !== "admin" || password !== "admin") {
-            errorDiv.innerHTML = "Sai tên đăng nhập hoặc mật khẩu!<br>Nếu là admin thì Tên và mật khẩu là: admin";
+            errorDiv.innerHTML = "Sai tên đăng nhập hoặc mật khẩu!<br>Nếu là 'admin' thì Tên và mật khẩu là: 'admin'";
 
             return false; // Ngăn không cho form được submit
         }
