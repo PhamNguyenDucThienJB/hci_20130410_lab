@@ -15,7 +15,7 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
+        <link rel="stylesheet" href=""  />
 
         <!--For Plugins external css-->
         <link rel="stylesheet" href="assets/css/plugins.css" />
@@ -31,6 +31,18 @@
     </head>
     <!-- #82ca9c -->
     <style>
+         .header-nav-wrap {
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background-color: #333333;
+        display: flex;
+        font-size: x-large;
+        justify-content: space-around;
+        align-items: center;
+    }
+        
         button {
             border: 2px solid #183b25; 
             /* margin-top: 60px; */
@@ -67,6 +79,33 @@
         .button-btn:hover {
             background-color: white;
         }
+        ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
 
     </style>
     <body>
@@ -75,9 +114,29 @@
         <![endif]-->
 
         <!-- Sections -->
-       
+        
 
-       
+        <nav class="header-nav-wrap" style="    background-color: #333333;
+        display: flex;
+        font-size: x-large;
+        justify-content: space-around;
+        align-items: center;" >
+            <div class="header-logo">
+                <a class="site-logo" style="text-decoration: none; color: white;" href="index.html">
+                    <p >Phạm Nguyễn Đức Thiện</p>
+                </a>
+            </div>
+            <ul class="header-nav"style="font-size:sma">
+                <li class="current"><a href="/index.html" title="Home">Trang Chủ</a></li>
+                <li style="font-size: x-large;" ><a href="/about.html" title="About">Giới Thiệu</a></li>
+                <li style="font-size: x-large;"><a href="/lab1.html" title="Events">Lab 1</a></li>
+                <li style="font-size: x-large;"><a href="/lab2/login.html" title="Events">Lab 2</a></li>
+                <li style="font-size: x-large;"><a href="/lab3/index.html" title="Events">Lab 3</a></li>
+                <li style="font-size: x-large;"><a href="/lab1_2.html" title="Events">Lab 4</a></li>
+                <li style="font-size: x-large;"><a href="events.html" title="Events">Lab 5</a></li>
+                <li style="font-size: x-large;"><a href="/contact.html" title="Contact us">Liên Hệ</a></li>  
+            </ul>
+        </nav>
 
       
 
