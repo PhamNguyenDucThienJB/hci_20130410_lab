@@ -50,7 +50,10 @@
             font-size: 15px;
             padding: 0 15px;
         }
-
+		.header-nav li.current a {
+    color: orange; /* Chọn màu sáng cho đường dẫn hiện tại */
+    /* background-color: #F0F0F0; Màu nền sáng hơn cho dễ nhìn */
+}
     body {
 	background: #DCDDDF url(https://cssdeck.com/uploads/media/items/7/7AF2Qzt.png);
 	color: #000;
@@ -69,7 +72,7 @@ h1,h2,h3,h4,h5,h6{ color:#563D64;}
 small{ font-size:10px;}
 b, strong{ font-weight:bold;}
 a{ text-decoration: none; }
-a:hover{ text-decoration: underline; }
+a:hover{ text-decoration: none; }
 .left { float:left; }
 .right { float:right; }
 .alignleft { float: left; margin-right: 15px; }
@@ -293,6 +296,7 @@ form:after {
 .button a:hover {
 	background-position: 0 -135px;
 	color: #00aeef;
+	
 }
 
          .header-nav-wrap {
@@ -321,14 +325,15 @@ form:after {
                     <p >Phạm Nguyễn Đức Thiện</p>
                 </a>
             </div>
-            <ul class="header-nav"style="    display: flex;
+            <ul class="header-nav"style="     line-height: 7.8rem;
+;   display: flex;
 			font-size: sma;
 			/* flex-direction: row; */
-			justify-content: flex-end;">
-                <li  style="font-size: x-large;" class="current"><a href="../index.html" title="Home">Trang Chủ</a></li>
+			justify-content: flex-end; ">
+                <li  style="font-size: x-large;" ><a href="../index.html" title="Home">Trang Chủ</a></li>
                 <li style="font-size: x-large;" ><a href="../about.html" title="About">Giới Thiệu</a></li>
                 <li style="font-size: x-large;"><a href="../lab1.html" title="Events">Lab 1</a></li>
-                <li style="font-size: x-large;"><a href="login.html" title="Events">Lab 2</a></li>
+                <li class="current" style="font-size: x-large;"><a href="login.html" title="Events">Lab 2</a></li>
                 <li style="font-size: x-large;"><a href="../lab3/index.html" title="Events">Lab 3</a></li>
                 <li style="font-size: x-large;"><a href="../lab1_2.html" title="Events">Lab 4</a></li>
                 <li style="font-size: x-large;"><a href="../events.html" title="Events">Lab 5</a></li>
@@ -448,7 +453,7 @@ form:after {
     } 
     
     function runCode() {
-        alert("Nếu là admin thì Tên:admin và mật khẩu là: admin");
+        alert("Nếu là admin thì Tên: 'admin' và mật khẩu là: 'admin'");
     }
 	// Lấy tất cả các nút tab và nội dung tab
 const tablinks = document.querySelectorAll('.tablinks');

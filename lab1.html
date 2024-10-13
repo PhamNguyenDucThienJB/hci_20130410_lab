@@ -45,6 +45,10 @@
             text-align: center;
             transition: background-color 0.3s ease; /* Hiệu ứng mượt mà khi thay đổi nền */
         }
+        .header-nav li.current a {
+    color: orange; /* Chọn màu sáng cho đường dẫn hiện tại */
+    /* background-color: #F0F0F0; Màu nền sáng hơn cho dễ nhìn */
+}
 
         .s-header a {
             color: white;
@@ -108,9 +112,9 @@
 
   <nav class="header-nav-wrap" style="font-size: small;" >
     <ul class="header-nav"style="font-size:sma">
-        <li class="current"><a href="index.html" title="Home">Trang Chủ</a></li>
-        <li style="font-size: small;" ><a href="about.html" title="About">Giới Thiệu</a></li>
-        <li style="font-size: small;"><a href="lab1.html" title="Events">Lab 1</a></li>
+        <li ><a href="index.html" title="Home">Trang Chủ</a></li>
+        <li style="font-size: medium;" ><a href="about.html" title="About">Giới Thiệu</a></li>
+        <li class="current" style="font-size: small;"><a href="lab1.html" title="Events">Lab 1</a></li>
         <li style="font-size: small;"><a href="../lab2/login.html" title="Events">Lab 2</a></li>
         <li style="font-size: small;"><a href="../lab3/index.html" title="Events">Lab 3</a></li>
         <li style="font-size: small;"><a href="events.html" title="Events">Lab 4</a></li>
