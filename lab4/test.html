@@ -1,0 +1,181 @@
+<html>
+ <head>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-gray-900 text-white">
+  <div class="flex items-center justify-between bg-gray-800 p-4">
+   <div class="flex items-center space-x-4">
+    <i class="fas fa-arrow-left text-white">
+    </i>
+    <span class="text-white">
+     Home
+    </span>
+   </div>
+   <div class="text-white">
+    MuleSoft 4.X Complete Guide For Beginners- Hands On Projects
+   </div>
+   <div class="flex items-center space-x-4">
+    <i class="fas fa-star text-white">
+    </i>
+    <span class="text-white">
+     Leave a rating
+    </span>
+    <i class="fas fa-trophy text-white">
+    </i>
+    <span class="text-white">
+     Your progress
+    </span>
+    <button class="bg-gray-700 text-white px-4 py-2 rounded">
+     Share
+    </button>
+    <i class="fas fa-ellipsis-v text-white">
+    </i>
+   </div>
+  </div>
+  <div class="flex">
+   <div class="flex-1 bg-gray-900 p-4">
+    <div class="relative">
+     <img alt="Integration and Integration history slide with hexagonal pattern background" class="w-full h-auto" height="450" src="https://storage.googleapis.com/a1aa/image/tCIUeJGn2X1tBSCGc8FhfPImRZyzm4GyWMnpaVkU0M6XyQoTA.jpg" width="800"/>
+     <div class="absolute inset-0 flex items-center justify-center">
+      <i class="fas fa-play-circle text-6xl text-black">
+      </i>
+     </div>
+    </div>
+   </div>
+   <div class="w-1/3 bg-gray-800 p-4">
+    <div class="text-white text-lg mb-4">
+     <button class="w-full text-left flex justify-between items-center" onclick="toggleSection('courseContent')">
+      Course content
+      <i class="fas fa-chevron-down">
+      </i>
+     </button>
+    </div>
+    <div id="courseContent" style="display: none;">
+     <div class="space-y-2">
+      <div class="flex items-center space-x-2">
+       <input class="form-checkbox" type="checkbox"/>
+       <span class="text-white">
+        2. Integration introduction
+       </span>
+       <span class="text-gray-400">
+        8min
+       </span>
+      </div>
+      <div class="flex items-center space-x-2">
+       <input class="form-checkbox" type="checkbox"/>
+       <span class="text-white">
+        3. Mule API development life cycle and components
+       </span>
+       <span class="text-gray-400">
+        4min
+       </span>
+      </div>
+      <div class="flex items-center space-x-2">
+       <input class="form-checkbox" type="checkbox"/>
+       <span class="text-white">
+        4. Course resources &amp; documents
+       </span>
+       <span class="text-gray-400">
+        1min
+       </span>
+      </div>
+      <button class="bg-gray-700 text-white px-4 py-2 rounded flex items-center space-x-2">
+       <i class="fas fa-folder">
+       </i>
+       <span>
+        Resources
+       </span>
+      </button>
+     </div>
+     <div class="mt-4">
+      <div class="text-white text-lg mb-2">
+       <button class="w-full text-left flex justify-between items-center" onclick="toggleSection('section2')">
+        Section 2: Mule 4 installation set-up
+        <i class="fas fa-chevron-down">
+        </i>
+       </button>
+      </div>
+      <div class="text-gray-400" id="section2" style="display: none;">
+       0 / 2 | 21min
+      </div>
+     </div>
+     <div class="mt-4">
+      <div class="text-white text-lg mb-2">
+       <button class="w-full text-left flex justify-between items-center" onclick="toggleSection('section3')">
+        Section 3: Mule basics - develop first mule app, run, debug, export &amp; import mule app
+        <i class="fas fa-chevron-down">
+        </i>
+       </button>
+      </div>
+      <div class="text-gray-400" id="section3" style="display: none;">
+       0 / 7 | 42min
+      </div>
+     </div>
+     <div class="mt-4">
+      <div class="text-white text-lg mb-2">
+       <button class="w-full text-left flex justify-between items-center" onclick="toggleSection('section4')">
+        Section 4: Mule basics - Mule events and mule message structure
+        <i class="fas fa-chevron-down">
+        </i>
+       </button>
+      </div>
+      <div class="text-gray-400" id="section4" style="display: none;">
+       0 / 12 | 1hr 17min
+      </div>
+     </div>
+     <div class="mt-4">
+      <div class="text-white text-lg mb-2">
+       <button class="w-full text-left flex justify-between items-center" onclick="toggleSection('section5')">
+        Section 5: Mule basics - Basic transformations
+        <i class="fas fa-chevron-down">
+        </i>
+       </button>
+      </div>
+      <div class="text-gray-400" id="section5" style="display: none;">
+       0 / 7 | 42min
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="bg-gray-900 p-4">
+   <div class="flex space-x-4">
+    <button class="text-white">
+     Overview
+    </button>
+    <button class="text-gray-400">
+     Q&amp;A
+    </button>
+    <button class="text-gray-400">
+     Notes
+    </button>
+    <button class="text-gray-400">
+     Announcements
+    </button>
+    <button class="text-gray-400">
+     Reviews
+    </button>
+    <button class="text-gray-400">
+     Learning tools
+    </button>
+   </div>
+  </div>
+  <div class="bg-gray-900 p-4">
+   <div class="text-white text-lg">
+    Upgraded with latest MuleSoft ESB versions, Anypoint Platform, DataWeave,
+   </div>
+  </div>
+  <script>
+   function toggleSection(sectionId) {
+     var section = document.getElementById(sectionId);
+     if (section.style.display === "none") {
+       section.style.display = "block";
+     } else {
+       section.style.display = "none";
+     }
+   }
+  </script>
+ </body>
+</html>

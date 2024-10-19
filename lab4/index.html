@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar With Bootstrap</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+<script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script>  -->
+</head>
+
+</script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+<style>
+    .sidebar-link {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-width: 150px; /* Điều chỉnh chiều rộng tối đa */
+}
+.navbar a {
+    color: black;
+}
+.nav-link.active {
+            border-bottom: 2px solid black;
+        }
+.sidebar-dropdown {
+    max-width: 200px; /* Điều chỉnh chiều rộng tối đa cho dropdown */
+}
+.navbar {
+            background-color: #333;
+            color: white;
+        }
+        .navbar a {
+            color: white;
+        }
+.video-section {
+    position: relative;
+    padding-bottom: 56.25%; /* Tỷ lệ 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background-color: white;
+}
+.course-header {
+            margin-top: 20px;
+        }
+        .course-header h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .course-header .ratings {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .course-header .ratings i {
+            color: #f4c150;
+        }
+        .course-header .ratings span {
+            margin-left: 5px;
+            font-size: 14px;
+        }
+        .course-header .details {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .course-header .details i {
+            margin-right: 5px;
+        }
+        .course-header .details a {
+            color: #5624d0;
+            text-decoration: none;
+        }
+        .course-header .details a:hover {
+            text-decoration: underline;
+        }
+        .course-content {
+            margin-top: 20px;
+        }
+        .course-content h2 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .course-content ul {
+            list-style: none;
+            padding: 0;
+        }
+        .course-content ul li {
+            margin-bottom: 10px;
+        }
+        .course-content ul li i {
+            color: #007bff;
+            margin-right: 10px;
+        }
+        .course-sidebar {
+            margin-top: 20px;
+        }
+        .course-sidebar h3 {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .course-sidebar .section {
+            margin-top: 10px;
+        }
+        .course-sidebar .section h4 {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .course-sidebar .section p {
+            font-size: 14px;
+            margin: 0;
+        }
+.video-section iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.video-section {
+            height: 500px;
+            flex: 3;
+            background-color: white;
+            padding: 20px;
+            margin-right: 20px;
+        }
+        .video-section img {
+            width: 100%;
+        }
+        .course-content {
+            flex: 1;
+            background-color: #fff;
+            padding: 20px;
+        }
+        .course-content h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .course-content ul {
+            list-style-type: none;
+            padding: 0;
+            /* Ban đầu nội dung ẩn đi */
+        }
+        .course-content ul.show {
+            display: block; /* Hiển thị khi nhấn vào */
+        }
+        .overview {
+            padding: 20px;
+            background-color: #fff;
+            margin-top: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+         <a class="navbar-brand" href="#">
+          <i class="fas fa-arrow-left">
+          </i>
+          Home
+         </a>
+         <span class="navbar-text mx-auto">
+          MuleSoft 4.X Complete Guide For Beginners - Hands On Projects
+         </span>
+         <div class="d-flex">
+          <a style="    margin-right: 20px;" class="nav-link" href="#">
+           <i class="fas fa-star">
+           </i>
+           Leave a rating
+          </a>
+          <a style="    margin-right: 20px;" class="nav-link" href="#">
+           <i class="fas fa-trophy">
+           </i>
+           Your progress
+          </a>
+          <a style="    margin-right: 20px;" class="nav-link" href="#">
+           <i class="fas fa-share">
+           </i>
+           Share
+          </a>
+          <a class="nav-link" href="#">
+           <i class="fas fa-ellipsis-v">
+           </i>
+          </a>
+         </div>
+        </div>
+       </nav>
+    <div class="wrapper">
+        <aside id="sidebar" class="expand">
+            <div class="d-flex">
+                <button class="toggle-btn" type="button">
+                    <i class="lni lni-grid-alt"></i>
+                </button>
+                <div class="sidebar-logo">
+                    <a href="#">   <--- Nhân vào đây để thu nhỏ </a>
+                </div>
+            </div>
+            <ul class="sidebar-nav">
+                <!-- Auth section -->
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
+                        <i class="lni lni-folder"></i>
+                        <span>Course content</span>
+                    </a>
+                    <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link"><input type="checkbox"/>2. Intergration introduction <span class="badge bg-secondary">
+                                8min
+                               </span></a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link"><input type="checkbox"/>3. Intergration introduction <span class="badge bg-secondary">
+                                4min
+                               </span></a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link"><input type="checkbox"/>4. Intergration introduction <span class="badge bg-secondary">
+                                4min
+                               </span></a>
+                        </li>
+                        <!-- <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">   <button class="btn btn-sm btn-outline-secondary float-end">
+                                Resources
+                                <i class="fas fa-caret-down">
+                                </i>
+                               </button></a>
+                        </li> -->
+                        
+                    </ul>
+                </li>
+        
+                <!-- Reports section -->
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#reports" aria-expanded="false" aria-controls="reports">
+                        <i class="lni lni-folder"></i>
+                        <span>Section 2: Mule 4 installation set-up</span>
+                    </a>
+                    <ul id="reports" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link"><input type="checkbox"/>2. Intergration introduction <span class="badge bg-secondary">
+                                8min
+                               </span></a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link"><input type="checkbox"/>3. Intergration introduction <span class="badge bg-secondary">
+                                4min
+                               </span></a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link"><input type="checkbox"/>4. Intergration introduction <span class="badge bg-secondary">
+                                4min
+                               </span></a>
+                        </li>
+                    </ul>
+                </li>
+        
+                <!-- Settings section -->
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#settings" aria-expanded="false" aria-controls="settings">
+                        <i class="lni lni-folder"></i>
+                        <span>Section 3: Mule basics - develop first mule app, run, debug,<br> export & import mule app</span>
+                    </a>
+                    <ul id="settings" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link"><input type="checkbox"/>2. Intergration introduction <span class="badge bg-secondary">
+                                8min
+                               </span></a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link"><input type="checkbox"/>3. Intergration introduction <span class="badge bg-secondary">
+                                4min
+                               </span></a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link"><input type="checkbox"/>4. Intergration introduction <span class="badge bg-secondary">
+                                4min
+                               </span></a>
+                        </li>
+                    </ul>
+                </li>
+        
+                <!-- Dashboard section -->
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="lni lni-folder"></i>
+                        <span>Section 4: Mule basics - Mule events and <br>mule message structure</span>
+                    </a>
+                </li>
+        
+                <!-- Projects section -->
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#projects" aria-expanded="false" aria-controls="projects">
+                        <i class="lni lni-folder"></i>
+                        <span>Section 5: Mule basics - Basic transformations</span>
+                    </a>
+                    <ul id="projects" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link"><input type="checkbox"/>2. Intergration introduction <span class="badge bg-secondary">
+                                8min
+                               </span></a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link"><input type="checkbox"/>3. Intergration introduction <span class="badge bg-secondary">
+                                4min
+                               </span></a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link"><input type="checkbox"/>4. Intergration introduction <span class="badge bg-secondary">
+                                4min
+                               </span></a>
+                        </li>
+                    </ul>
+                </li>
+        
+                <!-- Messages section -->
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="lni lni-folder"></i>
+                        <span>Section 6: Mule rest-full services (database) <br> as provider - simple use case to get started</span>
+                    </a>
+                </li>
+        
+                <!-- Analytics section -->
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#analytics" aria-expanded="false" aria-controls="analytics">
+                        <i class="lni lni-folder"></i>
+                        <span>Section 7: DataWeave language - basics</span>
+                    </a>
+                    <ul id="analytics" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link"><input type="checkbox"/>2. Intergration introduction <span class="badge bg-secondary">
+                                8min
+                               </span></a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link"><input type="checkbox"/>3. Intergration introduction <span class="badge bg-secondary">
+                                4min
+                               </span></a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link"><input type="checkbox"/>4. Intergration introduction <span class="badge bg-secondary">
+                                4min
+                               </span></a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#Section8" aria-expanded="false" aria-controls="Section8">
+                        <i class="lni lni-folder"></i>
+                        <span>Section 8: Mule database module - <br>first system api uhub (database) sapi..</span>
+                    </a>
+                    <ul id="Section8" class="sidebar-dropdown list-unstyled collapse" >
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link"><input type="checkbox"/>2. Intergration introduction <span class="badge bg-secondary">
+                                8min
+                               </span></a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link"><input type="checkbox"/>3. Intergration introduction <span class="badge bg-secondary">
+                                4min
+                               </span></a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link"><input type="checkbox"/>4. Intergration introduction <span class="badge bg-secondary">
+                                4min
+                               </span></a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Support section -->
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#support" aria-expanded="false" aria-controls="support">
+                        <i class="lni lni-folder"></i>
+                        <span>Section 9: Mule validation module and flow types</span>
+                    </a>
+                    <ul id="support" class="sidebar-dropdown list-unstyled collapse" >
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link"><input type="checkbox"/>2. Intergration introduction <span class="badge bg-secondary">
+                                8min
+                               </span></a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link"><input type="checkbox"/>3. Intergration introduction <span class="badge bg-secondary">
+                                4min
+                               </span></a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link"><input type="checkbox"/>4. Intergration introduction <span class="badge bg-secondary">
+                                4min
+                               </span></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        
+            <div class="sidebar-footer">
+                <a href="#" class="sidebar-link">
+                    <i class="lni lni-exit"></i>
+                    <span>Page Up</span>
+                </a>
+            </div>
+        </aside>
+        <h1></h1>
+        <div class="main p-3">
+            <div class="video-section">
+                <iframe width="1200" height="526" src="https://www.youtube.com/embed/tgbNymZ7vqY" title="The Afters - Broken Hallelujah (Official Lyric video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                        <a style="color: black;" class="navbar-brand" href="#"><i class="fas fa-search"></i></a>
+                        <div class="collapse navbar-collapse">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a style="color: black;" class="nav-link active" aria-current="page" href="#">Overview</a>
+                                </li>
+                                <li  class="nav-item">
+                                    <a  style="color: black;"class="nav-link" href="#">Q&A</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a style="color: black;" class="nav-link" href="#">Notes</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a style="color: black;"class="nav-link" href="#">Announcements</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a style="color: black;"class="nav-link" href="#">Reviews</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a style="color: black;"class="nav-link" href="#">Learning tools</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="container">
+                    <div class="row course-header">
+                        <div class="col-12">
+                            <h1>Upgraded with latest MuleSoft ESB versions, Anypoint Platform, DataWeave, MUnit, DevOps, MCD Tests and Realtime Project</h1>
+                            <div class="ratings">
+                                <i class="fas fa-star"></i>
+                                <span>4.6</span>
+                                <span>(4,705 ratings)</span>
+                                <span>26,379 Students</span>
+                                <span>50.5 hours</span>
+                            </div>
+                            <div class="details">
+                                <p><i class="fas fa-calendar-alt"></i> Last updated November 2023</p>
+                                <p><i class="fas fa-globe"></i> English <span>English [Auto], French [Auto], <a href="#">5 more</a></span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row course-content">
+                        <div class="col-12">
+                            <h2>What you'll learn</h2>
+                            <ul class="row">
+                                <li class="col-md-6"><i  class="fas fa-check"></i> You will become an expert in Mule ESB, Anypoint platform operations, MUnit and DevOps with Mule.</li>
+                                <li class="col-md-6"><i class="fas fa-check"></i> This course teaches you Mule 4.x in depth including all the phases of SDLC.</li>
+                                <li class="col-md-6"><i class="fas fa-check"></i> Step by step coding in detail explanation.</li>
+                                <li class="col-md-6"><i class="fas fa-check"></i> You will feel real-time hands-on experience after finishing this course.</li>
+                                <li class="col-md-6"><i class="fas fa-check"></i> You should be able to set up MuleSoft by your own for your organization.</li>
+                                <li class="col-md-6"><i class="fas fa-check"></i> The course will keep on being added with new topics from MuleSoft.</li>
+                                <li class="col-md-6"><i class="fas fa-check"></i> You should be able to develop, design, manage projects.</li>
+                                <li class="col-md-6"><i class="fas fa-check"></i> One course destination to learn all the actions of real-time projects.</li>
+                                <li class="col-md-6"><i class="fas fa-check"></i> Mule Level 1, Level 2 and Integration Associate.</li>
+                                <li class="col-md-6"><i class="fas fa-check"></i> Mule real-time project of this course helps you to...</li>
+                            </ul>
+                        </div>
+                    </div>
+
+            </div>
+
+        </div>
+        
+        
+    </div>
+ 
+
+</body>
+
+</html>
