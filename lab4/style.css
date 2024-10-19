@@ -142,3 +142,170 @@ a.sidebar-link:hover {
     transform: rotate(45deg);
     transition: all .2s ease-out;
 }
+
+
+
+.sidebar-link {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-width: 150px; /* Điều chỉnh chiều rộng tối đa */
+}
+.navbar a {
+    color: black;
+}
+.nav-link.active {
+            border-bottom: 2px solid black;
+        }
+.sidebar-dropdown {
+    max-width: 200px; /* Điều chỉnh chiều rộng tối đa cho dropdown */
+}
+.navbar {
+            background-color: #333;
+            color: white;
+        }
+        .navbar a {
+            color: white;
+        }
+.video-section {
+    position: relative;
+    padding-bottom: 56.25%; /* Tỷ lệ 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background-color: white;
+}
+.course-header {
+            margin-top: 20px;
+        }
+        .course-header h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .course-header .ratings {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .course-header .ratings i {
+            color: #f4c150;
+        }
+        .course-header .ratings span {
+            margin-left: 5px;
+            font-size: 14px;
+        }
+        .course-header .details {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .course-header .details i {
+            margin-right: 5px;
+        }
+        .course-header .details a {
+            color: #5624d0;
+            text-decoration: none;
+        }
+        .course-header .details a:hover {
+            text-decoration: underline;
+        }
+        .course-content {
+            margin-top: 20px;
+        }
+        .course-content h2 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .course-content ul {
+            list-style: none;
+            padding: 0;
+        }
+        .course-content ul li {
+            margin-bottom: 10px;
+        }
+        .course-content ul li i {
+            color: #007bff;
+            margin-right: 10px;
+        }
+        .course-sidebar {
+            margin-top: 20px;
+        }
+        .course-sidebar h3 {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .course-sidebar .section {
+            margin-top: 10px;
+        }
+        .course-sidebar .section h4 {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .course-sidebar .section p {
+            font-size: 14px;
+            margin: 0;
+        }
+.video-section iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.course-content {
+    border: 2px solid #ccc; /* Viền màu xám */
+    padding: 20px; /* Khoảng cách bên trong để nội dung không chạm viền */
+    border-radius: 10px; /* Tùy chọn: bo tròn các góc của viền */
+    background-color: #f9f9f9; /* Tùy chọn: màu nền nhẹ cho phần này */
+}
+
+.course-content ul {
+    padding-left: 0; /* Xóa khoảng cách thụt lề mặc định của danh sách */
+}
+
+.course-content li {
+    list-style: none; /* Loại bỏ ký hiệu danh sách mặc định */
+    padding: 10px 0; /* Thêm khoảng cách giữa các mục trong danh sách */
+}
+
+.video-section {
+            height: 500px;
+            flex: 3;
+            background-color: white;
+            padding: 20px;
+            margin-right: 20px;
+        }
+        .video-section img {
+            width: 100%;
+        }
+        .course-content {
+            flex: 1;
+            background-color: #fff;
+            padding: 20px;
+        }
+        .course-content h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .course-content ul {
+            list-style-type: none;
+            padding: 0;
+            /* Ban đầu nội dung ẩn đi */
+        }
+        .course-content ul.show {
+            display: block; /* Hiển thị khi nhấn vào */
+        }
+        .overview {
+            padding: 20px;
+            background-color: #fff;
+            margin-top: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
