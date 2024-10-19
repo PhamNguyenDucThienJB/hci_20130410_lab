@@ -250,6 +250,8 @@ a.sidebar-link:hover {
     left: 0;
     width: 100%;
     height: 100%;
+    border-radius: 15px; /* Điều chỉnh giá trị để thay đổi độ bo tròn */
+    overflow: hidden;
 }
 .course-content {
     border: 2px solid #ccc; /* Viền màu xám */
@@ -272,7 +274,7 @@ a.sidebar-link:hover {
             flex: 3;
             background-color: white;
             padding: 20px;
-            margin-right: 20px;
+            
         }
         .video-section img {
             width: 100%;
@@ -282,6 +284,7 @@ a.sidebar-link:hover {
             background-color: #fff;
             padding: 20px;
         }
+        
         .course-content h3 {
             font-size: 18px;
             margin-bottom: 10px;
