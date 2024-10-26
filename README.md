@@ -15,3 +15,6 @@
 
 #Lab 4
    + https://phamnguyenducthienjb.github.io/hci_20130410_lab/lab4/index.html
+
+#Lab 5
+   + https://phamnguyenducthienjb.github.io/hci_20130410_lab/lab5/index.html
