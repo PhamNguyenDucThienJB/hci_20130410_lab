@@ -12,7 +12,72 @@
     <link rel="stylesheet" href="style2.css">
 
 </head>
+<style>
+.header-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-nav li {
+  font-size: 1.2rem;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.header-nav li a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 15px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.header-nav li a:hover {
+  background-color: #555;
+  color: #f0f0f0;
+}
+
+.header-nav li.current a {
+  background-color: orange;
+  color: #fff;
+  font-weight: bold;
+}
+
+.header-nav li.current a:hover {
+  background-color: orange;
+}
+
+</style>
 <body>
+    <nav class="header-nav-wrap" style="    background-color: black;
+        display: flex;
+        font-size: x-large;
+        justify-content: space-around;
+        align-items: center;" >
+            <div class="header-logo">
+                <a class="site-logo" style="text-decoration: none; color: white;" href="index.html">
+                    <p >Phạm Nguyễn Đức Thiện</p>
+                </a>
+            </div>
+            <ul class="header-nav"style="line-height: 5rem;display: flex;">
+                <li style="font-size: x-large;" ><a href="../index.html" title="Home">Trang Chủ</a></li>
+                <li style="font-size: x-large;" ><a href="../about.html" title="Home">Giới Thiệu</a></li>
+                <li style="font-size: x-large;"><a href="../lab1.html" title="Events">Lab 1</a></li>
+                <li style="font-size: x-large;"><a href="../lab2/login.html" title="Events">Lab 2</a></li>
+                <li  style="font-size: x-large;"><a href="index.html" title="Events">Lab 3</a></li>
+                <li  style="font-size: x-large;"><a href="../lab4/index.html" title="Events">Lab 4</a></li>
+                <li class="current" style="font-size: x-large;"><a href="../lab5/index.html" title="Events">Lab 5</a></li>
+                <li  style="font-size: x-large;"><a href="../contact.html" title="Contact us">Liên Hệ</a></li>  
+            </ul>
+        </nav>
     <div class="header">
         <h1>My Learning</h1>
         <p style="margin-top: 30px;">
