@@ -1,0 +1,48 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+.header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+.header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+.header p {
+    margin: 0;
+    font-size: 1rem;
+}
+.nav-tabs .nav-link {
+    color: #333;
+}
+.nav-tabs .nav-link.active {
+    color: #000;
+    font-weight: bold;
+}
+.content {
+    padding: 20px;
+}
+.badge-section, .certification-section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.certification-card {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.certification-card img {
+    width: 200px;
+    height: 150px;
+    margin-right: 10px;
+}
+.certification-card h6 {
+    margin: 0;
+    font-size: 1rem;
+}

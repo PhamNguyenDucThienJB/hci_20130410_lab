@@ -1,0 +1,56 @@
+.content {
+    padding: 20px;
+}
+.card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px 0;
+}
+.card h5 {
+    font-weight: bold;
+}
+.card p {
+    margin: 10px 0;
+}
+.card a {
+    color: #007bff;
+    text-decoration: none;
+}
+.badge {
+    background-color: #ddd;
+    color: #333;
+    font-size: 0.75em;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+ /* Tăng kích thước certification-card */
+ .certification-card {
+    border: 1px solid #ccc; /* Đường viền */
+    border-radius: 5px; /* Bo góc */
+    padding: 15px; /* Tăng khoảng cách bên trong */
+    margin-right: 20px; /* Khoảng cách giữa các thẻ */
+    display: flex;
+    align-items: center;
+    width:1000px; /* Tăng chiều rộng thẻ */
+    height: 200px; /* Tăng chiều cao thẻ */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+}
+
+/* Tăng kích thước ảnh và bo góc cho ảnh */
+.certification-card img {
+    max-width: 500px; /* Tăng chiều rộng tối đa cho ảnh */
+    margin-right: 15px; /* Tăng khoảng cách giữa ảnh và nội dung */
+    border-radius: 5px; /* Bo góc cho ảnh */
+}
+
+/* Tăng kích thước chữ trong thẻ */
+.certification-card h6 {
+    font-size: 18px; /* Tăng kích thước tiêu đề */
+    margin: 0;
+}
+
+.certification-card p {
+    font-size: 14px; /* Tăng kích thước chữ nhỏ hơn */
+    color: #555; /* Đặt màu chữ nhạt hơn */
+    margin: 0;
+}

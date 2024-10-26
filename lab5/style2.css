@@ -1,0 +1,29 @@
+
+.course-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-top: 20px;
+}
+.course-card img {
+    max-width: 100%;
+    height: auto;
+}
+.course-card .course-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.course-card .course-subtitle {
+    font-size: 1rem;
+    color: #666;
+}
+.course-card .course-status {
+    font-size: 0.875rem;
+    color: #666;
+}
+.course-card .course-rating {
+    font-size: 0.875rem;
+    color: #666;
+}
+.course-card .course-rating .fa-star {
+    color: #f0ad4e;
+}
