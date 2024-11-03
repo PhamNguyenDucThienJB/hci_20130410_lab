@@ -1,0 +1,299 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Web Development Courses</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+ <link href="style.css" rel="stylesheet" >
+ 
+ <style>
+ .course-container {
+  position: relative;
+  display: flex;
+}
+
+.course-card {
+  width: 300px;
+  cursor: pointer;
+}
+
+.course-info {
+  position: absolute;
+  top: 0;
+  left: 85%;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: 8px;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* Không phản hồi khi không hiển thị */
+}
+
+.course-container:hover .course-info {
+  opacity: 1;
+  pointer-events: auto; /* Kích hoạt khi hover */
+}
+
+/* Hiển thị .course-info khi hover vào .course-card */
+.course-container:hover .course-info {
+  opacity: 1;
+}
+
+.title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .updated {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        .details {
+            color: #6c757d;
+        }
+        .description {
+            margin-top: 10px;
+        }
+        .checklist {
+            margin-top: 10px;
+        }
+        .checklist i {
+            color: #4CAF50;
+            margin-right: 10px;
+        }
+        .add-to-cart {
+            background-color: #6a0dad;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        
+        .category-button {
+          background-color: #f8f9fa;
+          margin: 5px;
+          display: inline-block;
+          border-radius: 20px;
+          padding: 10px 20px;
+          font-weight: bold;
+    background-color: #f8f9fa; /* Màu nền mặc định */
+    color: #333; /* Màu chữ mặc định */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng chuyển màu */
+}
+
+.category-button.active {
+    background-color: black; /* Màu nền cho nút được chọn */
+    color: white; /* Màu chữ cho nút được chọn */
+}
+  </style>
+</head>
+<body class="bg-gray-100">
+  <div class="container mx-auto p-4 flex">
+    <div class="flex-1">
+      <div class="flex space-x-4 overflow-x-auto pb-4">
+        <button class="category-button">Web Development<br/><span class="text-sm text-gray-600">13.3M+ learners</span></button>
+        <button class="category-button">JavaScript<br/><span class="text-sm text-gray-600">17.7M+ learners</span></button>
+        <button class="category-button">React JS<br/><span class="text-sm text-gray-600">7M+ learners</span></button>
+        <button class="category-button">Angular<br/><span class="text-sm text-gray-600">4M+ learners</span></button>
+        <button class="category-button">Java<br/><span class="text-sm text-gray-600">15.5M+ learners</span></button>
+        <button class="category-button">Android Development<br/><span class="text-sm text-gray-600">8M+ learners</span></button>
+        <button class="category-button">iOS Development<br/><span class="text-sm text-gray-600">4M+ learners</span></button>
+        <button class="category-button">CSS<br/><span class="text-sm text-gray-600">9M+ learners</span></button>
+    </div>
+
+    
+      
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="course-container">
+          <div class="course-card bg-white rounded-lg shadow-md p-4">
+            <img alt="Course image for Modern HTML & CSS From The Beginning" class="rounded-t-lg" height="400" src="https://storage.googleapis.com/a1aa/image/tvdiI81eC23Tek6XlkZofCLgFMNFAG2KcQVwCcwXmergMSzOB.jpg" width="600"/>
+            <div class="p-4">
+              <h2 class="text-lg font-bold">Modern HTML & CSS From The Beginning</h2>
+              <p class="text-gray-600">Brad Traversy, Web Developer</p>
+              <div class="flex items-center mt-2">
+                <span class="text-yellow-500"><i class="fas fa-star"></i> 4.8</span>
+                <span class="text-gray-600 ml-2">(152,345)</span>
+              </div>
+              <div class="flex items-center mt-2">
+                <span class="text-lg font-bold">₫1,199,000</span>
+              </div>
+            </div>
+          </div>
+          <div class="course-info">
+            <div class="container">
+              <div class="title">The Web Developer Bootcamp 2024</div>
+              <div class="updated">Updated October 2024</div>
+              <div class="details">74 total hours • All Levels • Subtitles</div>
+              <div class="description">
+                10 Hours of React just added. Become a Developer With ONE course - HTML, CSS, JavaScript, React, Node, MongoDB and More!
+              </div>
+              <div class="checklist">
+                <div><i class="fas fa-check"></i>The ins and outs of HTML5, CSS3, and Modern JavaScript for 2021</div>
+                <div><i class="fas fa-check"></i>Make REAL web applications using cutting-edge technologies</div>
+                <div><i class="fas fa-check"></i>Create responsive, accessible, and beautiful layouts</div>
+              </div>
+              <div class="add-to-cart"><button>Add to cart</button> </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="course-container">
+          <div class="course-card bg-white rounded-lg shadow-md p-4">
+            <img alt="Image of a modern workspace with a computer" height="200" src="https://storage.googleapis.com/a1aa/image/2qIyyG3Hgbp2OB303SFJr3ZlQ3MMea4hRpxD6pcYs9Of8NtTA.jpg" width="300"/>
+            <div class="p-4">
+              <h2 class="text-lg font-bold">The Complete 2024 Web Development Bootcamp</h2>
+              <p class="text-gray-600">Colt Steele, Software Engineer</p>
+              <div class="flex items-center mt-2">
+                <span class="text-yellow-500"><i class="fas fa-star"></i> 4.9</span>
+                <span class="text-gray-600 ml-2">(200,345)</span>
+              </div>
+              <div class="flex items-center mt-2">
+                <span class="text-lg font-bold">₫1,499,000</span>
+              </div>
+            </div>
+          </div>
+          <div class="course-info">
+            <div class="container">
+              <div class="title">The Complete 2024 Web Development Bootcamp</div>
+              <div class="updated">Updated September 2024</div>
+              <div class="details">60 total hours • Intermediate Level • Subtitles</div>
+              <div class="description">
+                Dive deep into JavaScript with this advanced course covering ES6, asynchronous programming, and much more.
+              </div>
+              <div class="checklist">
+                <div><i class="fas fa-check"></i>Deep understanding of closures, scopes, and context</div>
+                <div><i class="fas fa-check"></i>Asynchronous JavaScript (Promises, Async/Await)</div>
+                <div><i class="fas fa-check"></i>Advanced data structures in JavaScript</div>
+              </div>
+              <div class="add-to-cart"><button>Add to cart</button> </div>
+            </div>
+          </div>
+        </div>
+        <div class="course-container">
+          <div class="course-card bg-white rounded-lg shadow-md p-4">
+            <img alt="Illustration of people working on web development" height="200" src="https://storage.googleapis.com/a1aa/image/xzg0mUP73NZmN1Qv5oXkY6jDbFqt2pqkLwI4NhhrCWfgeNtTA.jpg" width="300"/>
+            <div class="p-4">
+              <h2 class="text-lg font-bold">Web Development Masterclass - Online Certification Course</h2>
+              <p class="text-gray-600">Colt Steele, Software Engineer</p>
+              <div class="flex items-center mt-2">
+                <span class="text-yellow-500"><i class="fas fa-star"></i> 4.9</span>
+                <span class="text-gray-600 ml-2">(200,345)</span>
+              </div>
+              <div class="flex items-center mt-2">
+                <span class="text-lg font-bold">₫1,499,000</span>
+              </div>
+            </div>
+          </div>
+          <div class="course-info">
+            <div class="container">
+              <div class="title"> Web Development Masterclass - Online Certification Course</div>
+              <div class="updated">Updated September 2024</div>
+              <div class="details">60 total hours • Intermediate Level • Subtitles</div>
+              <div class="description">
+                Dive deep into JavaScript with this advanced course covering ES6, asynchronous programming, and much more.
+              </div>
+              <div class="checklist">
+                <div><i class="fas fa-check"></i>Deep understanding of closures, scopes, and context</div>
+                <div><i class="fas fa-check"></i>Asynchronous JavaScript (Promises, Async/Await)</div>
+                <div><i class="fas fa-check"></i>Advanced data structures in JavaScript</div>
+              </div>
+              <div class="add-to-cart"><button>Add to cart</button> </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="course-container">
+          <div class="course-card bg-white rounded-lg shadow-md p-4">
+            <img alt="Course image with various web development logos and a person" height="200" src="https://storage.googleapis.com/a1aa/image/9q5nPRe10XypAa0c7h1YFQ9xfZczH7yYWUsJ9QjfCFKB6banA.jpg" width="300"/>            <div class="p-4">
+              <h2 class="text-lg font-bold">JavaScript Advanced Concepts</h2>
+              <p class="text-gray-600">Colt Steele, Software Engineer</p>
+              <div class="flex items-center mt-2">
+                <span class="text-yellow-500"><i class="fas fa-star"></i> 4.9</span>
+                <span class="text-gray-600 ml-2">(200,345)</span>
+              </div>
+              <div class="flex items-center mt-2">
+                <span class="text-lg font-bold">₫1,499,000</span>
+              </div>
+            </div>
+          </div>
+          <div class="course-info">
+            <div class="container">
+              <div class="title">Master JavaScript in 2024</div>
+              <div class="updated">Updated September 2024</div>
+              <div class="details">60 total hours • Intermediate Level • Subtitles</div>
+              <div class="description">
+                Dive deep into JavaScript with this advanced course covering ES6, asynchronous programming, and much more.
+              </div>
+              <div class="checklist">
+                <div><i class="fas fa-check"></i>Deep understanding of closures, scopes, and context</div>
+                <div><i class="fas fa-check"></i>Asynchronous JavaScript (Promises, Async/Await)</div>
+                <div><i class="fas fa-check"></i>Advanced data structures in JavaScript</div>
+              </div>
+              <div class="add-to-cart"><button>Add to cart</button> </div>
+            </div>
+          </div>
+        </div>
+        <div class="course-container">
+          <div class="course-card bg-white rounded-lg shadow-md p-4">
+            <img alt="Course image with various web development logos and a person" height="200" src="https://storage.googleapis.com/a1aa/image/9q5nPRe10XypAa0c7h1YFQ9xfZczH7yYWUsJ9QjfCFKB6banA.jpg" width="300"/>            <div class="p-4">
+              <h2 class="text-lg font-bold">JavaScript Advanced Concepts</h2>
+              <p class="text-gray-600">Colt Steele, Software Engineer</p>
+              <div class="flex items-center mt-2">
+                <span class="text-yellow-500"><i class="fas fa-star"></i> 4.9</span>
+                <span class="text-gray-600 ml-2">(200,345)</span>
+              </div>
+              <div class="flex items-center mt-2">
+                <span class="text-lg font-bold">₫1,499,000</span>
+              </div>
+            </div>
+          </div>
+          <div class="course-info">
+            <div class="container">
+              <div class="title">Master JavaScript in 2024</div>
+              <div class="updated">Updated September 2024</div>
+              <div class="details">60 total hours • Intermediate Level • Subtitles</div>
+              <div class="description">
+                Dive deep into JavaScript with this advanced course covering ES6, asynchronous programming, and much more.
+              </div>
+              <div class="checklist">
+                <div><i class="fas fa-check"></i>Deep understanding of closures, scopes, and context</div>
+                <div><i class="fas fa-check"></i>Asynchronous JavaScript (Promises, Async/Await)</div>
+                <div><i class="fas fa-check"></i>Advanced data structures in JavaScript</div>
+              </div>
+              <div class="add-to-cart"><button>Add to cart</button> </div>
+            </div>
+          </div>
+        </div>
+
+
+        
+    </div>
+    
+  </div>
+</body>
+<script src="main.js">
+ 
+
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const categoryButtons = document.querySelectorAll('.category-button');
+
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Xóa lớp active khỏi tất cả các nút
+            categoryButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Thêm lớp active cho nút được nhấp
+            button.classList.add('active');
+        });
+    });
+});
+</script>
+</html>
