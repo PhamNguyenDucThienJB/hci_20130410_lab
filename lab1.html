@@ -111,10 +111,11 @@
   </div>
 
   <nav class="header-nav-wrap" style="font-size: small;" >
-    <ul class="header-nav"style="font-size:sma">
+    <ul class="header-nav"style="font-size:small">
         <li ><a href="index.html" title="Home">Trang Chủ</a></li>
         <li style="font-size: medium;" ><a href="about.html" title="About">Giới Thiệu</a></li>
         <li class="current" style="font-size: small;"><a href="lab1.html" title="Events">Lab 1</a></li>
+        <li  style="font-size: small;"><a href="lab1_2.html" title="Events">Lab 1-2</a></li>
         <li style="font-size: small;"><a href="./lab2/login.html" title="Events">Lab 2</a></li>
         <li style="font-size: small;"><a href="./lab3/index.html" title="Events">Lab 3</a></li>
         <li style="font-size: small;"><a href="./lab4/index.html" title="Events">Lab 4</a></li>
@@ -127,6 +128,7 @@
   <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
 
 </header> <!-- end s-header -->
+
 <div class="tabs" style="margin-top: 50px;">
   <button class="tablinks active" data-electronic="allproducts">Requirement</button>
   <button class="tablinks" data-electronic="Microcontrollers">Design</button>
@@ -321,13 +323,54 @@
                       </div>
                     </div>
                   </form>
+                  
               </div>
           </div>
           
           </form>
         </div>
       </div>
+      <a href="slide_01.html" class="right-arrow">
+        <i class="fas fa-arrow-right"></i>
+      </a>
       <style>
+        .right-arrow {
+    position: fixed;
+    top: 50%; /* Đặt mũi tên ở giữa chiều dọc màn hình */
+    right: 10px; /* Căn lề phải */
+    transform: translateY(-50%); /* Căn chỉnh chính xác giữa màn hình */
+    font-size: 70px; /* Kích cỡ của mũi tên */
+    color: #333; /* Màu sắc của mũi tên */
+    cursor: pointer; /* Thêm con trỏ tay khi hover vào */
+    z-index: 1000; /* Đảm bảo mũi tên hiển thị trên cùng */
+  }
+  .left-arrow:hover{
+    color: #007bff; 
+  }
+  .right-arrow:hover {
+    color: #007bff; /* Màu thay đổi khi hover vào mũi tên */
+  }
+  
+  .left-arrow {
+    position: fixed;
+    top: 50%; 
+    left: 10px; /* Đặt mũi tên ở phía bên trái */
+    transform: translateY(-50%);
+    font-size: 70px; /* Tăng kích thước của mũi tên */
+    color: #333; 
+    text-decoration: none;
+    z-index: 1000;
+  }
+     /* Định dạng thanh điều hướng */
+.header-nav-wrap {
+    background-color: #333; /* Màu nền đậm hơn */
+    padding: 20px; /* Tạo khoảng cách giữa nội dung và mép */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tạo đổ bóng để làm nổi bật */
+    position: sticky;
+    top: 0;
+    z-index: 1000000000;
+    height: 80px;
+}
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
         * {
           margin: 0;

@@ -187,30 +187,72 @@
         .close-btn:hover {
             background-color: #d4ac0d;
         }
+
+        .right-arrow {
+    position: fixed;
+    top: 50%; /* Đặt mũi tên ở giữa chiều dọc màn hình */
+    right: 10px; /* Căn lề phải */
+    transform: translateY(-50%); /* Căn chỉnh chính xác giữa màn hình */
+    font-size: 70px; /* Kích cỡ của mũi tên */
+    color: #333; /* Màu sắc của mũi tên */
+    cursor: pointer; /* Thêm con trỏ tay khi hover vào */
+    z-index: 1000; /* Đảm bảo mũi tên hiển thị trên cùng */
+  }
+  .left-arrow:hover{
+    color: #007bff; 
+  }
+  .right-arrow:hover {
+    color: #007bff; /* Màu thay đổi khi hover vào mũi tên */
+  }
+  
+  .left-arrow {
+    position: fixed;
+    top: 50%; 
+    left: 10px; /* Đặt mũi tên ở phía bên trái */
+    transform: translateY(-50%);
+    font-size: 70px; /* Tăng kích thước của mũi tên */
+    color: #333; 
+    text-decoration: none;
+    z-index: 1000;
+  }
+     /* Định dạng thanh điều hướng */
+.header-nav-wrap {
+    background-color: #333; /* Màu nền đậm hơn */
+    padding: 20px; /* Tạo khoảng cách giữa nội dung và mép */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tạo đổ bóng để làm nổi bật */
+    position: sticky;
+    top: 0;
+    z-index: 1000000000;
+    height: 80px;
+}
+
     </style>
 </head>
-<header class="s-header">
 
-    <div class="header-logo">
-        <a class="site-logo" href="index.html">
-            <p >JB.Phạm Nguyễn Đức Thiện</p>
-        </a>
-    </div>
-
-    <nav class="header-nav-wrap" >
-        <ul class="header-nav"style="font-size: larger;">
-            <li class="current"><a href="index.html" title="Home">Trang Chủ</a></li>
-            <li><a href="about.html" title="About">Giới Thiệu</a></li>
-            <li><a href="events.html" title="Events">Lab Bài Tập</a></li>
-            <li><a href="contact.html" title="Contact us">Liên Hệ</a></li>  
-        </ul>
-    </nav>
 
     <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
 
 </header> <!-- end s-header -->
 <body>
-    
+    <nav class="header-nav-wrap" style="background-color: #333333; display: flex; font-size: x-large; justify-content: space-around; align-items: center;">
+        <div class="header-logo" >
+            <a class="site-logo" style="text-decoration: none; color: white;" href="../index.html">
+                <p>JB. Phạm Nguyễn Đức Thiện</p>
+            </a>
+        </div>
+    <ul class="header-nav" style="line-height: 5rem;">
+        <li ><a href="index.html" title="Home" style="margin-left: 400px;">Trang Chủ</a></li>
+        <li style="font-size: small;" ><a href="about.html" title="About">Giới Thiệu</a></li>
+        <li  style="font-size: small;"><a href="lab1.html" title="Events">Lab 1</a></li>
+        <li class="current" style="font-size: small;"><a href="lab1_2.html" title="Events">Lab 1-2</a></li>
+        <li style="font-size: small;"><a href="./lab2/login.html" title="Events">Lab 2</a></li>
+        <li style="font-size: small;"><a href="./lab3/index.html" title="Events">Lab 3</a></li>
+        <li style="font-size: small;"><a href="./lab4/index.html" title="Events">Lab 4</a></li>
+        <li style="font-size: small;"><a href="./lab5/index.html" title="Events">Lab 5</a></li>
+        <li style="font-size: small;"><a href="./lab6/index.html" title="Events">Lab 6</a></li>
+        <li style="font-size: small;"><a href="contact.html" title="Contact us">Liên Hệ</a></li>  
+    </ul>
+</nav>
 <div>
 <!-- Sidebar Menu -->
 <div style="margin-top: 70px;
