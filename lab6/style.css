@@ -146,3 +146,173 @@ body {
     font-weight: bold;
     margin-top: 20px;
 }
+
+
+.course-container {
+    position: relative;
+    display: flex;
+  }
+  
+  .course-card {
+    width: 300px;
+    cursor: pointer;
+  }
+  
+  .course-info {
+    position: absolute;
+    top: 0;
+    left: 85%;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 8px;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* Không phản hồi khi không hiển thị */
+  }
+  
+  .course-container:hover .course-info {
+    opacity: 1;
+    pointer-events: auto; /* Kích hoạt khi hover */
+  }
+  
+  /* Hiển thị .course-info khi hover vào .course-card */
+  .course-container:hover .course-info {
+    opacity: 1;
+  }
+  
+  .title {
+              font-size: 24px;
+              font-weight: bold;
+          }
+          .updated {
+              color: #4CAF50;
+              font-weight: bold;
+          }
+          .details {
+              color: #6c757d;
+          }
+          .description {
+              margin-top: 10px;
+          }
+          .checklist {
+              margin-top: 10px;
+          }
+          .checklist i {
+              color: #4CAF50;
+              margin-right: 10px;
+          }
+          .add-to-cart {
+              background-color: #6a0dad;
+              color: white;
+              font-weight: bold;
+              padding: 10px;
+              text-align: center;
+              margin-top: 20px;
+              border-radius: 5px;
+          }
+          
+          .category-button {
+            background-color: #f8f9fa;
+            margin: 5px;
+            display: inline-block;
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-weight: bold;
+      background-color: #f8f9fa; /* Màu nền mặc định */
+      color: #333; /* Màu chữ mặc định */
+      transition: background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng chuyển màu */
+  }
+  
+  .category-button.active {
+      background-color: black; /* Màu nền cho nút được chọn */
+      color: white; /* Màu chữ cho nút được chọn */
+  }
+
+
+  .right-arrow {
+    position: fixed;
+    top: 50%; /* Đặt mũi tên ở giữa chiều dọc màn hình */
+    right: 10px; /* Căn lề phải */
+    transform: translateY(-50%); /* Căn chỉnh chính xác giữa màn hình */
+    font-size: 70px; /* Kích cỡ của mũi tên */
+    color: #333; /* Màu sắc của mũi tên */
+    cursor: pointer; /* Thêm con trỏ tay khi hover vào */
+    z-index: 1000; /* Đảm bảo mũi tên hiển thị trên cùng */
+  }
+  .left-arrow:hover{
+    color: #007bff; 
+  }
+  .right-arrow:hover {
+    color: #007bff; /* Màu thay đổi khi hover vào mũi tên */
+  }
+  
+  .left-arrow {
+    position: fixed;
+    top: 50%; 
+    left: 10px; /* Đặt mũi tên ở phía bên trái */
+    transform: translateY(-50%);
+    font-size: 70px; /* Tăng kích thước của mũi tên */
+    color: #333; 
+    text-decoration: none;
+    z-index: 1000;
+  }
+     /* Định dạng thanh điều hướng */
+.header-nav-wrap {
+    background-color: #333; /* Màu nền đậm hơn */
+    padding: 20px; /* Tạo khoảng cách giữa nội dung và mép */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tạo đổ bóng để làm nổi bật */
+    position: sticky;
+    top: 0;
+    z-index: 1000000000;
+    height: 80px;
+}
+
+/* Logo */
+.header-logo a {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Định dạng danh sách các liên kết */
+.header-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: contents;
+    justify-content: space-around;
+    width: 50%; /* Điều chỉnh kích thước của thanh menu */
+}
+
+/* Các mục trong danh sách liên kết */
+.header-nav li {
+    margin: 0 15px;
+}
+
+/* Định dạng cho các liên kết */
+.header-nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng khi di chuột */
+}
+
+/* Hiệu ứng hover cho liên kết */
+.header-nav a:hover {
+    background-color: #555; /* Màu khi hover */
+    color: #ffcc00; /* Màu chữ khi hover */
+    border-radius: 5px;
+}
+
+/* Hiển thị trạng thái của liên kết hiện tại */
+.header-nav .current a {
+    background-color: #ffcc00;
+    color: black;
+    border-radius: 5px;
+}

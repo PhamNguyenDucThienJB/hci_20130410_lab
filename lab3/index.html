@@ -79,36 +79,62 @@
         .button-btn:hover {
             background-color: white;
         }
-        ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+ /* Định dạng thanh điều hướng */
+ .header-nav-wrap {
+    background-color: #333; /* Màu nền đậm hơn */
+    padding: 20px; /* Tạo khoảng cách giữa nội dung và mép */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tạo đổ bóng để làm nổi bật */
+    position: sticky;
+    top: 0;
+    z-index: 1000000000;
+    height: 80px;
 }
 
-li {
-  float: left;
+/* Logo */
+.header-logo a {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
 }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+/* Định dạng danh sách các liên kết */
+.header-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: contents;
+    justify-content: space-around;
+    width: 50%; /* Điều chỉnh kích thước của thanh menu */
 }
 
-li a:hover:not(.active) {
-  background-color: #111;
+/* Các mục trong danh sách liên kết */
+.header-nav li {
+    margin: 0 15px;
 }
 
-.active {
-  background-color: #04AA6D;
+/* Định dạng cho các liên kết */
+.header-nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng khi di chuột */
 }
-.header-nav li.current a {
-    color: orange; /* Chọn màu sáng cho đường dẫn hiện tại */
-    /* background-color: #F0F0F0; Màu nền sáng hơn cho dễ nhìn */
+
+/* Hiệu ứng hover cho liên kết */
+.header-nav a:hover {
+    background-color: #555; /* Màu khi hover */
+    color: #ffcc00; /* Màu chữ khi hover */
+    border-radius: 5px;
+}
+
+/* Hiển thị trạng thái của liên kết hiện tại */
+.header-nav .current a {
+    background-color: #ffcc00;
+    color: black;
+    border-radius: 5px;
 }
     </style>
     <body>
@@ -119,14 +145,11 @@ li a:hover:not(.active) {
         <!-- Sections -->
         
 
-        <nav class="header-nav-wrap" style="    background-color: #333333;
-        display: flex;
-        font-size: x-large;
-        justify-content: space-around;
-        align-items: center;" >
+        <nav class="header-nav-wrap"
+        >
             <div class="header-logo">
-                <a class="site-logo" style="text-decoration: none; color: white;" href="index.html">
-                    <p >Phạm Nguyễn Đức Thiện</p>
+                <a class="site-logo" style="text-decoration: none; color: white;" href="../index.html">
+                    <p >JB.Phạm Nguyễn Đức Thiện</p>
                 </a>
             </div>
             <ul class="header-nav"style="line-height: 5rem;">
@@ -137,6 +160,7 @@ li a:hover:not(.active) {
                 <li  class="current"style="font-size: x-large;"><a href="index.html" title="Events">Lab 3</a></li>
                 <li  style="font-size: x-large;"><a href="../lab4/index.html" title="Events">Lab 4</a></li>
                 <li style="font-size: x-large;"><a href="../lab5/index.html" title="Events">Lab 5</a></li>
+                <li  style="font-size: x-large;"><a href="../lab6/index.html" title="Events">Lab 6</a></li>
                 <li style="font-size: x-large;"><a href="../contact.html" title="Contact us">Liên Hệ</a></li>  
             </ul>
         </nav>

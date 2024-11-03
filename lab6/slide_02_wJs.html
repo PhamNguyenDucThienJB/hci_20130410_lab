@@ -8,91 +8,48 @@
  <link href="style.css" rel="stylesheet" >
  
  <style>
- .course-container {
-  position: relative;
+ .course-card {
   display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-.course-card {
-  width: 300px;
-  cursor: pointer;
+.course-card .p-4 {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px; /* Đặt chiều cao tối thiểu đủ lớn để các thành phần đều thẳng hàng */
 }
 
-.course-info {
-  position: absolute;
-  top: 0;
-  left: 85%;
-  width: 300px;
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 1rem;
-  border-radius: 8px;
-  z-index: 10;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none; /* Không phản hồi khi không hiển thị */
+.course-card img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
 }
 
-.course-container:hover .course-info {
-  opacity: 1;
-  pointer-events: auto; /* Kích hoạt khi hover */
-}
 
-/* Hiển thị .course-info khi hover vào .course-card */
-.course-container:hover .course-info {
-  opacity: 1;
-}
-
-.title {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .updated {
-            color: #4CAF50;
-            font-weight: bold;
-        }
-        .details {
-            color: #6c757d;
-        }
-        .description {
-            margin-top: 10px;
-        }
-        .checklist {
-            margin-top: 10px;
-        }
-        .checklist i {
-            color: #4CAF50;
-            margin-right: 10px;
-        }
-        .add-to-cart {
-            background-color: #6a0dad;
-            color: white;
-            font-weight: bold;
-            padding: 10px;
-            text-align: center;
-            margin-top: 20px;
-            border-radius: 5px;
-        }
-        
-        .category-button {
-          background-color: #f8f9fa;
-          margin: 5px;
-          display: inline-block;
-          border-radius: 20px;
-          padding: 10px 20px;
-          font-weight: bold;
-    background-color: #f8f9fa; /* Màu nền mặc định */
-    color: #333; /* Màu chữ mặc định */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng chuyển màu */
-}
-
-.category-button.active {
-    background-color: black; /* Màu nền cho nút được chọn */
-    color: white; /* Màu chữ cho nút được chọn */
-}
   </style>
 </head>
 <body class="bg-gray-100">
+  <nav class="header-nav-wrap" style="background-color: #333333; display: flex; font-size: x-large; justify-content: space-around; align-items: center;">
+    <div class="header-logo" >
+        <a class="site-logo" style="text-decoration: none; color: white;" href="../index.html">
+            <p>JB. Phạm Nguyễn Đức Thiện</p>
+        </a>
+    </div>
+    <ul class="header-nav" style="line-height: 5rem;">
+        <li style="font-size: x-large;"><a href="../index.html" title="Home">Trang Chủ</a></li>
+        <li style="font-size: x-large;"><a href="../about.html" title="Home">Giới Thiệu</a></li>
+        <li style="font-size: x-large;"><a href="../lab1.html" title="Events">Lab 1</a></li>
+        <li style="font-size: x-large;"><a href="../lab2/login.html" title="Events">Lab 2</a></li>
+        <li  style="font-size: x-large;"><a href="../lab3/index.html" title="Events">Lab 3</a></li>
+        <li   style="font-size: x-large;"><a href="../lab4/index.html" title="Events">Lab 4</a></li>
+        <li style="font-size: x-large;"><a href="../lab5/index.html" title="Events">Lab 5</a></li>
+        <li  class="current" style="font-size: x-large;"><a href="../lab6/index.html" title="Events">Lab 6</a></li>
+        <li style="font-size: x-large;"><a href="../contact.html" title="Contact us">Liên Hệ</a></li>
+    </ul>
+</nav>
   <div class="container mx-auto p-4 flex">
     <div class="flex-1">
       <div class="flex space-x-4 overflow-x-auto pb-4">
@@ -111,9 +68,9 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <div class="course-container">
-          <div class="course-card bg-white rounded-lg shadow-md p-4">
+          <div class="course-card bg-white rounded-lg shadow-md p-4 flex flex-col h-full">
             <img alt="Course image for Modern HTML & CSS From The Beginning" class="rounded-t-lg" height="400" src="https://storage.googleapis.com/a1aa/image/tvdiI81eC23Tek6XlkZofCLgFMNFAG2KcQVwCcwXmergMSzOB.jpg" width="600"/>
-            <div class="p-4">
+            <div class="p-4 flex flex-col justify-between flex-grow">
               <h2 class="text-lg font-bold">Modern HTML & CSS From The Beginning</h2>
               <p class="text-gray-600">Brad Traversy, Web Developer</p>
               <div class="flex items-center mt-2">
@@ -176,20 +133,22 @@
           </div>
         </div>
         <div class="course-container">
-          <div class="course-card bg-white rounded-lg shadow-md p-4">
+          <div class="course-card bg-white rounded-lg shadow-md p-4 flex flex-col h-full">
             <img alt="Illustration of people working on web development" height="200" src="https://storage.googleapis.com/a1aa/image/xzg0mUP73NZmN1Qv5oXkY6jDbFqt2pqkLwI4NhhrCWfgeNtTA.jpg" width="300"/>
-            <div class="p-4">
+            <div class="p-4 flex flex-col justify-between flex-grow">
               <h2 class="text-lg font-bold">Web Development Masterclass - Online Certification Course</h2>
               <p class="text-gray-600">Colt Steele, Software Engineer</p>
-              <div class="flex items-center mt-2">
+              <div class="flex items-center  mt-2">
                 <span class="text-yellow-500"><i class="fas fa-star"></i> 4.9</span>
                 <span class="text-gray-600 ml-2">(200,345)</span>
               </div>
-              <div class="flex items-center mt-2">
+              <div class="flex-grow"></div>
+              <div class="flex items-center  mt-2">
                 <span class="text-lg font-bold">₫1,499,000</span>
               </div>
             </div>
           </div>
+          
           <div class="course-info">
             <div class="container">
               <div class="title"> Web Development Masterclass - Online Certification Course</div>
@@ -274,26 +233,24 @@
 
         
     </div>
-    
+    <div class="flex justify-center mt-4">
+      <button class="bg-white border border-gray-300 text-gray-800 py-2 px-4 rounded-full">
+       Show all Web Development courses (Áp dụng JavaScript)
+      </button>
+     </div>
   </div>
+  <a href="slide_03.html" class="right-arrow">
+    <i class="fas fa-arrow-right"></i>
+  </a>
+  <a href="slide_01.html" class="left-arrow">
+    <i class="fas fa-arrow-left"></i>
+  </a>
 </body>
 <script src="main.js">
  
 
 </script>
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-    const categoryButtons = document.querySelectorAll('.category-button');
 
-    categoryButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Xóa lớp active khỏi tất cả các nút
-            categoryButtons.forEach(btn => btn.classList.remove('active'));
-            
-            // Thêm lớp active cho nút được nhấp
-            button.classList.add('active');
-        });
-    });
-});
 </script>
 </html>

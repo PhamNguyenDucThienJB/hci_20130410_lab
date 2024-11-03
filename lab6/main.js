@@ -33,4 +33,19 @@ function showDetails() {
 
 
 
+ document.addEventListener('DOMContentLoaded', () => {
+  const categoryButtons = document.querySelectorAll('.category-button');
+
+  categoryButtons.forEach(button => {
+      button.addEventListener('click', () => {
+          // Xóa lớp active khỏi tất cả các nút
+          categoryButtons.forEach(btn => btn.classList.remove('active'));
+          
+          // Thêm lớp active cho nút được nhấp
+          button.classList.add('active');
+      });
+  });
+});
+
+
   

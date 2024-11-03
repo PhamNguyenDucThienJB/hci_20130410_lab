@@ -55,7 +55,7 @@
     /* background-color: #F0F0F0; Màu nền sáng hơn cho dễ nhìn */
 }
     body {
-	background: #DCDDDF url(https://cssdeck.com/uploads/media/items/7/7AF2Qzt.png);
+	background: white;
 	color: #000;
 	font: 14px Arial;
 	margin: 0 auto;
@@ -299,7 +299,7 @@ form:after {
 	
 }
 
-         .header-nav-wrap {
+.header-nav-wrap {
         position: -webkit-sticky; /* Safari */
         position: sticky;
         top: 0;
@@ -310,37 +310,32 @@ form:after {
         justify-content: space-around;
         align-items: center;
     }
-</style>
-
+    </style>
+</head>
+<link href="style.css" rel="stylesheet">
 <body>
 	
+<div>
+	<nav class="header-nav-wrap">
+		<div class="header-logo">
+			<a class="site-logo" style="text-decoration: none; color: white;" href="../index.html">
+				<p style="margin-top: 13px;">JB.Phạm Nguyễn Đức Thiện</p>
+			</a>
+		</div>
+		<ul class="header-nav"style="line-height: 5rem;">
+			<li style="font-size: x-large;margin-left: 350px;" ><a href="../index.html" title="Home">Trang Chủ</a></li>
+			<li style="font-size: x-large;" ><a href="../about.html" title="Home">Giới Thiệu</a></li>
+			<li style="font-size: x-large;"><a href="../lab1.html" title="Events">Lab 1</a></li>
+			<li  class="current" style="font-size: x-large;"><a href="login.html" title="Events">Lab 2</a></li>
+			<li  style="font-size: x-large;"><a href="../lab3/index.html" title="Events">Lab 3</a></li>
+			<li  style="font-size: x-large;"><a href="../lab4/index.html" title="Events">Lab 4</a></li>
+			<li style="font-size: x-large;"><a href="../lab5/index.html" title="Events">Lab 5</a></li>
+			<li  style="font-size: x-large;"><a href="../lab6/index.html" title="Events">Lab 6</a></li>
+			<li style="font-size: x-large;"><a href="../contact.html" title="Contact us">Liên Hệ</a></li>  
+		</ul>
+	</nav>
 
-        <nav class="header-nav-wrap" style="    background-color: #333333;
-        display: flex;
-        font-size: x-large;
-        justify-content: space-around;
-        align-items: center;" >
-            <div class="header-logo">
-                <a class="site-logo" style="text-decoration: none; color: white;" href="index.html">
-                    <p >Phạm Nguyễn Đức Thiện</p>
-                </a>
-            </div>
-            <ul class="header-nav"style="     line-height: 7.8rem;
-;   display: flex;
-			font-size: sma;
-			/* flex-direction: row; */
-			justify-content: flex-end; ">
-              <li style="font-size: x-large;"><a href="../index.html" title="Home">Trang Chủ</a></li>
-			  <li style="font-size: x-large;"><a href="../about.html" title="Home">Giới Thiệu</a></li>
-			  <li style="font-size: x-large;"><a href="../lab1.html" title="Events">Lab 1</a></li>
-			  <li class="current" style="font-size: x-large;"><a href="../lab2/login.html" title="Events">Lab 2</a></li>
-			  <li style="font-size: x-large;"><a href="../lab3/index.html" title="Events">Lab 3</a></li>
-			  <li style="font-size: x-large;"><a href="../lab4/index.html" title="Events">Lab 4</a></li>
-			  <li style="font-size: x-large;"><a href="../lab5/index.html" title="Events">Lab 5</a></li>
-			  <li style="font-size: x-large;"><a href="../contact.html" title="Contact us">Liên Hệ</a></li>  
-            </ul>
-        </nav>
-
+</div>
         <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
 
 		<div class="tabs" style="margin-top: 50px;">
