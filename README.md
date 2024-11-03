@@ -18,3 +18,6 @@
 
 #Lab 5
    + https://phamnguyenducthienjb.github.io/hci_20130410_lab/lab5/index.html
+
+#Lab 6
+   + https://phamnguyenducthienjb.github.io/hci_20130410_lab/lab6/index.html
